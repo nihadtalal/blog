@@ -99,7 +99,8 @@ export default {
     },
     methods: {
         allCategory() {
-            axios.get('/api/category/')
+             const apiurl = 'https://nihadtalal.herokuapp.com'
+            axios.get(apiurl+'/api/category/')
                 .then(({ data }) => (this.categories = data
 
                 ))
