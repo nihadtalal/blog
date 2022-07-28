@@ -38,7 +38,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="category in filtersearch" :key="category.id">
+                                    <tr v-for="category in categories" :key="category.id">
                                         <td>{{ category.category_name }}</td>
                                         <td><router-link :to="{name:'edit-category', params: {id:category.id}}" class="btn btn-sm btn-primary">{{ $t('category.edit') }}</router-link>
                                             <a @click="deleteCategory(category.id)"
@@ -68,9 +68,6 @@ export default {
         if (!User.loggedIn()) {
             this.$router.push({ name: '/' })
         }
-
-        this.allCategory();
-        this.deleteCategory();
     },
     data() {
         return {
