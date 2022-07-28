@@ -2216,7 +2216,7 @@ var apiurl = 'https://nihadtalal.herokuapp.com';
         confirmButtonText: 'Yes, delete it!'
       }).then(function (result) {
         if (result.isConfirmed) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]('/api/category/' + id).then(function () {
+          axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"](apiurl + '/api/category/' + id).then(function () {
             _this3.categories = _this3.categories.filter(function (category) {
               return category.id != id;
             });
