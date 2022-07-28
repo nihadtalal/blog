@@ -2193,7 +2193,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     allCategory: function allCategory() {
       var _this2 = this;
 
-      axios.get('/api/category/').then(function (_ref) {
+      var apiurl = 'https://nihadtalal.herokuapp.com';
+      axios.get(apiurl + '/api/category/').then(function (_ref) {
         var data = _ref.data;
         return _this2.categories = data;
       })["catch"]();
@@ -5051,7 +5052,7 @@ var render = function render() {
     staticClass: "table align-items-center table-flush"
   }, [_c("thead", {
     staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("category.categoyname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("category.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (category) {
+  }, [_c("tr", [_c("th", [_vm._v("jfffs")]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("category.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (category) {
     return _c("tr", {
       key: category.id
     }, [_c("td", [_vm._v(_vm._s(category.category_name))]), _vm._v(" "), _c("td", [_c("router-link", {
