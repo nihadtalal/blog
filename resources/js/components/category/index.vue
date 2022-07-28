@@ -33,7 +33,7 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>jfffs</th>
+                                        <th>{{ $t('category.categoyname') }}</th>
                                           <th>{{ $t('category.action') }}</th>
                                     </tr>
                                 </thead>
@@ -99,8 +99,7 @@ export default {
     },
     methods: {
         allCategory() {
-             const apiurl = 'https://nihadtalal.herokuapp.com'
-            axios.get(apiurl+'/api/category/')
+            axios.get('/api/category/')
                 .then(({ data }) => (this.categories = data
 
                 ))
