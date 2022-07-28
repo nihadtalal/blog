@@ -2073,7 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
     categoryInsert: function categoryInsert() {
       var _this = this;
 
-      axios.post('https://nihadtalal.herokuapp.com/api/category', this.form).then(function () {
+      axios.post('api/category', this.form).then(function () {
         _this.$router.push({
           name: 'category'
         });
@@ -2121,7 +2121,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var _this = this;
 
   var id = this.$route.params.id;
-  axios.get('https://nihadtalal.herokuapp.com/api/category/' + id).then(function (_ref) {
+  axios.get('/api/category/' + id).then(function (_ref) {
     var data = _ref.data;
     return _this.form = data;
   })["catch"](console.log('error'));
@@ -2130,7 +2130,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     var _this2 = this;
 
     var id = this.$route.params.id;
-    axios.patch('https://nihadtalal.herokuapp.com/api/category/' + id, this.form).then(function () {
+    axios.patch('/api/category/' + id, this.form).then(function () {
       _this2.$router.push({
         name: 'category'
       });
@@ -2193,7 +2193,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     allCategory: function allCategory() {
       var _this2 = this;
 
-      axios.get('https://nihadtalal.herokuapp.com/api/category/').then(function (_ref) {
+      axios.get('/api/category/').then(function (_ref) {
         var data = _ref.data;
         return _this2.categories = data;
       })["catch"]();
@@ -2212,7 +2212,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         confirmButtonText: 'Yes, delete it!'
       }).then(function (result) {
         if (result.isConfirmed) {
-          axios["delete"]('https://nihadtalal.herokuapp.com/api/category/' + id).then(function () {
+          axios["delete"]('/api/category/' + id).then(function () {
             _this3.categories = _this3.categories.filter(function (category) {
               return category.id != id;
             });
@@ -5051,7 +5051,7 @@ var render = function render() {
     staticClass: "table align-items-center table-flush"
   }, [_c("thead", {
     staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("jfffs")]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("category.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (category) {
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("category.categoyname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("category.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (category) {
     return _c("tr", {
       key: category.id
     }, [_c("td", [_vm._v(_vm._s(category.category_name))]), _vm._v(" "), _c("td", [_c("router-link", {
