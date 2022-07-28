@@ -2164,6 +2164,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
 
     this.allCategory();
+    this.deleteCategory();
   },
   data: function data() {
     return {

@@ -70,6 +70,7 @@ export default {
         }
 
         this.allCategory();
+        this.deleteCategory();
     },
     data() {
         return {
