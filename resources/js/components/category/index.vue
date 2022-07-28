@@ -33,7 +33,7 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>{{ $t('category.categoyname') }}</th>
+                                        <th>jf</th>
                                           <th>{{ $t('category.action') }}</th>
                                     </tr>
                                 </thead>
