@@ -2228,6 +2228,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 }, "created", function created() {
   this.allCategory();
+  this.filtersearch();
+  this.deleteCategory(id);
 }));
 
 /***/ }),
@@ -5051,7 +5053,7 @@ var render = function render() {
     staticClass: "table align-items-center table-flush"
   }, [_c("thead", {
     staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("category.categoyname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("category.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.categories, function (category) {
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("category.categoyname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("category.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (category) {
     return _c("tr", {
       key: category.id
     }, [_c("td", [_vm._v(_vm._s(category.category_name))]), _vm._v(" "), _c("td", [_c("router-link", {
