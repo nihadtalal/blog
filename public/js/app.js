@@ -2153,12 +2153,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-
-var apiurl = 'https://nihadtalal.herokuapp.com';
 /* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
   created: function created() {
     if (!User.loggedIn()) {
@@ -2166,6 +2162,8 @@ var apiurl = 'https://nihadtalal.herokuapp.com';
         name: '/'
       });
     }
+
+    this.allCategory();
   },
   data: function data() {
     return {
@@ -2197,7 +2195,7 @@ var apiurl = 'https://nihadtalal.herokuapp.com';
     allCategory: function allCategory() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(apiurl + '/api/category/').then(function (_ref) {
+      axios.get('/api/category/').then(function (_ref) {
         var data = _ref.data;
         return _this2.categories = data;
       })["catch"]();
@@ -2216,7 +2214,7 @@ var apiurl = 'https://nihadtalal.herokuapp.com';
         confirmButtonText: 'Yes, delete it!'
       }).then(function (result) {
         if (result.isConfirmed) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"](apiurl + '/api/category/' + id).then(function () {
+          axios["delete"]('/api/category/' + id).then(function () {
             _this3.categories = _this3.categories.filter(function (category) {
               return category.id != id;
             });
