@@ -75,7 +75,7 @@ export default {
     },
     methods: {
         categoryInsert() {
-            axios.post('https://nihadtalal.herokuapp.com/api/category',this.form)
+            axios.post('api/category',this.form)
             .then(() => {
                 this.$router.push({name: 'category'})
                 Notification.success()

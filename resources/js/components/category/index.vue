@@ -33,7 +33,7 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>jfffs</th>
+                                        <th>{{ $t('category.categoyname') }}</th>
                                           <th>{{ $t('category.action') }}</th>
                                     </tr>
                                 </thead>
@@ -61,7 +61,8 @@
 </template>
 
 <script type="text/javascript">
-
+import axios from 'axios'
+    const apiurl = 'https://nihadtalal.herokuapp.com'
 export default {
     created() {
         if (!User.loggedIn()) {
@@ -99,8 +100,7 @@ export default {
     },
     methods: {
         allCategory() {
-             
-            axios.get('https://nihadtalal.herokuapp.com/api/category/')
+            axios.get(apiurl+'/api/category/')
                 .then(({ data }) => (this.categories = data
 
                 ))
@@ -119,7 +119,7 @@ export default {
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                     axios.delete('https://nihadtalal.herokuapp.com/api/category/'+id)
+                     axios.delete('/api/category/'+id)
                      .then(()=>{
                         this.categories = this.categories.filter(category => {
                             return category.id !=id

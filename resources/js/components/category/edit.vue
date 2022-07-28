@@ -74,7 +74,7 @@ export default {
     },
     created() {
         let id = this.$route.params.id
-        axios.get('https://nihadtalal.herokuapp.com/api/category/' + id)
+        axios.get('/api/category/' + id)
             .then(({ data }) => (this.form = data))
             .catch(console.log('error'))
     },
@@ -82,7 +82,7 @@ export default {
     
         categoryUpdate() {
             let id = this.$route.params.id
-            axios.patch('https://nihadtalal.herokuapp.com/api/category/' + id, this.form)
+            axios.patch('/api/category/' + id, this.form)
                 .then(() => {
                     this.$router.push({ name: 'category' })
                     Notification.success()
