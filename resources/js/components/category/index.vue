@@ -119,7 +119,7 @@ export default {
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                     axios.delete('/api/category/'+id)
+                     axios.delete(apiurl+'/api/category/'+id)
                      .then(()=>{
                         this.categories = this.categories.filter(category => {
                             return category.id !=id
