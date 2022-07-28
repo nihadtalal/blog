@@ -100,7 +100,7 @@ export default {
     },
     methods: {
         allCategory() {
-            axios.get(apiurl+'/api/category/')
+            axios.get('/api/category/')
                 .then(({ data }) => (this.categories = data
 
                 ))
@@ -119,7 +119,7 @@ export default {
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                     axios.delete(apiurl+'/api/category/'+id)
+                     axios.delete('/api/category/'+id)
                      .then(()=>{
                         this.categories = this.categories.filter(category => {
                             return category.id !=id
