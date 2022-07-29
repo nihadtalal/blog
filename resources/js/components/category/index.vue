@@ -103,7 +103,7 @@ export default {
             axios.get('/api/category/')
                 .then(({ data }) => {(this.categories = data
                 
-                )
+                );
                 Reload.$emit('AfterAdd');
                 })
                 .catch()
