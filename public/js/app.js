@@ -2153,15 +2153,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
   created: function created() {
     if (!User.loggedIn()) {
       this.$router.push({
         name: '/'
       });
     }
-
-    this.allCategory();
   },
   data: function data() {
     return {
@@ -2225,11 +2225,10 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     }
-  } // created() {
-  //     this.allCategory();
-  // }
-
-});
+  }
+}, "created", function created() {
+  this.allCategory();
+}));
 
 /***/ }),
 

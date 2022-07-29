@@ -68,8 +68,6 @@ export default {
         if (!User.loggedIn()) {
             this.$router.push({ name: '/' })
         }
-
-        this.allCategory();
     },
     data() {
         return {
@@ -141,9 +139,9 @@ export default {
             })
         }
     },
-    // created() {
-    //     this.allCategory();
-    // }
+    created() {
+        this.allCategory();
+    }
 
 }
 </script>
