@@ -2153,15 +2153,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
+/* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     if (!User.loggedIn()) {
       this.$router.push({
         name: '/'
       });
     }
+
+    this.allCategory();
   },
   data: function data() {
     return {
@@ -2195,8 +2195,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       axios.get('/api/category/').then(function (_ref) {
         var data = _ref.data;
-        _this2.categories = data;
-        Reload.$emit('AfterAdd');
+        return _this2.categories = data;
       })["catch"]();
     },
     deleteCategory: function deleteCategory(id) {
@@ -2226,14 +2225,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
     }
-  }
-}, "created", function created() {
-  var _this4 = this;
+  } // created() {
+  //     this.allCategory();
+  // }
 
-  Reload.$on('AfterAdd', function () {
-    _this4.allCategory();
-  });
-}));
+});
 
 /***/ }),
 

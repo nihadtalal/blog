@@ -68,6 +68,8 @@ export default {
         if (!User.loggedIn()) {
             this.$router.push({ name: '/' })
         }
+
+        this.allCategory();
     },
     data() {
         return {
@@ -101,11 +103,9 @@ export default {
     methods: {
         allCategory() {
             axios.get('/api/category/')
-                .then(({ data }) => {(this.categories = data
-                
-                );
-                Reload.$emit('AfterAdd');
-                })
+                .then(({ data }) => (this.categories = data
+        
+                ))
                 .catch()
         },
         deleteCategory(id) {
@@ -141,11 +141,9 @@ export default {
             })
         }
     },
-    created() {
-        Reload.$on('AfterAdd', () => {
-      this.allCategory();
-    });
-    }
+    // created() {
+    //     this.allCategory();
+    // }
 
 }
 </script>
