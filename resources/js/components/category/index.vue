@@ -62,8 +62,8 @@
 
 <script type="text/javascript">
 
-    import axios from 'axios'
-    const apiurl = 'https://nihadtalal.herokuapp.com'
+    // import axios from 'axios'
+    // const apiurl = 'https://nihadtalal.herokuapp.com'
     //  const apiurl = 'http://127.0.0.1:8000'
 export default {
     created() {
@@ -102,7 +102,7 @@ export default {
     },
     methods: {
         allCategory() {
-            return axios.get(apiurl+'/api/category/')
+            return axios.get('/api/category/')
                 .then(({ data }) => (this.categories = data
         
                 ))
