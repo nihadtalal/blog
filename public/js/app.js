@@ -2195,7 +2195,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       axios.get('/api/category/').then(function (_ref) {
         var data = _ref.data;
-        return _this2.categories = data;
+        _this2.categories = data;
+        Reload.$emit('AfterAdd');
       })["catch"]();
     },
     deleteCategory: function deleteCategory(id) {
@@ -2227,9 +2228,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   }
 }, "created", function created() {
-  this.allCategory();
-  this.filtersearch();
-  this.deleteCategory(id);
+  var _this4 = this;
+
+  Reload.$on('AfterAdd', function () {
+    _this4.allCategory();
+  });
 }));
 
 /***/ }),

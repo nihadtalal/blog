@@ -101,9 +101,11 @@ export default {
     methods: {
         allCategory() {
             axios.get('/api/category/')
-                .then(({ data }) => (this.categories = data
-
-                ))
+                .then(({ data }) => {(this.categories = data
+                
+                )
+                Reload.$emit('AfterAdd');
+                })
                 .catch()
         },
         deleteCategory(id) {
@@ -140,9 +142,9 @@ export default {
         }
     },
     created() {
-        this.allCategory();
-        this.filtersearch();
-        this.deleteCategory(id);
+        Reload.$on('AfterAdd', () => {
+      this.allCategory();
+    });
     }
 
 }
