@@ -133,6 +133,18 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer = DB::table('customers')->where('id',$id)->first();
+        $photo = $customer->photo;
+        if ($photo) {
+            try {
+                unlink($photo);
+            } catch (\Throwable $th) {
+                
+            }
+            
+           DB::table('customers')->where('id',$id)->delete();
+        }else{
+            DB::table('customers')->where('id',$id)->delete();
+        }
     }
 }

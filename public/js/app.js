@@ -6588,7 +6588,7 @@ var render = function render() {
     attrs: {
       "for": "exampleFormControlTextarea1"
     }
-  }, [_c("b", [_vm._v(_vm._s(_vm.$t("expense.expensedetails")))])]), _vm._v(" "), _c("input", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("expense.expenseamount")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",

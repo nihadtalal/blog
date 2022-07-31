@@ -33,7 +33,7 @@
 
                                             <div class="form-row">
                                                 <div class="col-md-12">
-                                                    <label for="exampleFormControlTextarea1" style="float:right;"><b>{{ $t('expense.expensedetails') }}</b></label>
+                                                    <label for="exampleFormControlTextarea1" style="float:right;"><b>{{ $t('expense.expenseamount') }}</b></label>
                                                     <input type="text" class="form-control number"
                                                         id="exampleInputFirstName"
                                                         v-model="form.amount">

@@ -163,7 +163,11 @@ class ProductController extends Controller
         $product = DB::table('products')->where('id',$id)->first();
         $photo = $product->image;
         if ($photo) {
-           unlink($photo);
+            try {
+                unlink($photo);
+            } catch (\Throwable $th) {
+                
+            }
            DB::table('products')->where('id',$id)->delete();
         }else{
             DB::table('products')->where('id',$id)->delete();

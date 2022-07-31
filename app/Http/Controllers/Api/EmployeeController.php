@@ -8,6 +8,7 @@ use App\Model\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Image;
+use Psy\Readline\Hoa\Console;
 
 class EmployeeController extends Controller
 {
@@ -142,7 +143,12 @@ class EmployeeController extends Controller
         $employee = DB::table('employees')->where('id',$id)->first();
         $photo = $employee->photo;
         if ($photo) {
-           unlink($photo);
+            try {
+                unlink($photo);
+            } catch (\Throwable $th) {
+                
+            }
+          
            DB::table('employees')->where('id',$id)->delete();
         }else{
             DB::table('employees')->where('id',$id)->delete();
