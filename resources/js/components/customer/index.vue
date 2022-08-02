@@ -15,7 +15,7 @@
 
             <div class="mb-4">
                 <input type="text" v-model="searchTerm" class="form-control" style="width:300px;"
-                    placeholder="Search Here">
+                    :placeholder="$t('customer.searchcustomer')">
 
                 <!-- Search By Name -->
                 <!-- <input type="checkbox" v-model="checked" id="checkbox">
@@ -27,18 +27,18 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Customer List</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">{{ $t('customer.customerlist') }}</h6>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Photo</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>Address</th>
-                                        <th>Action</th>
+                                        <th>{{ $t('customer.name') }}</th>
+                                        <th>{{ $t('customer.photo') }}</th>
+                                        <th>{{ $t('customer.phone') }}</th>
+                                        <th>{{ $t('customer.email') }}</th>
+                                        <th>{{ $t('customer.address') }}</th>
+                                        <th>{{ $t('customer.action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,9 +48,9 @@
                                         <td>{{ customer.phone }}</td>
                                         <td>{{ customer.email }}</td>
                                         <td>{{ customer.address }}</td>
-                                        <td><router-link :to="{name:'edit-customer', params: {id:customer.id}}" class="btn btn-sm btn-primary">Edit</router-link>
+                                        <td><router-link :to="{name:'edit-customer', params: {id:customer.id}}" class="btn btn-sm btn-primary">{{ $t('customer.edit') }}</router-link>
                                             <a @click="deleteCustomer(customer.id)"
-                                                class="btn btn-sm btn-danger" style="color:white">Delete</a>
+                                                class="btn btn-sm btn-danger" style="color:white">{{ $t('customer.delete') }}</a>
                                         </td>
 
                                     </tr>

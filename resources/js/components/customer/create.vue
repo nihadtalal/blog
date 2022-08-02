@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/customer" class="btn btn-primary">  {{ $t('subsidebar.AddCustomer') }}</router-link>
+                <router-link to="/customer" class="btn btn-primary">  {{ $t('customer.allcustomer') }}</router-link>
             </div>
         </div>
 
@@ -22,18 +22,18 @@
 
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                    <label for="InputText"><b>Name</b></label>
+                                                    <label for="InputText"><b>{{ $t('customer.name') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Full Name" v-model="form.name">
+                                                        :placeholder="$t('customer.entername')" v-model="form.name">
                                                     <small class="text-danger" v-if="errors.name">{{ errors.name[0]
                                                     }}</small>
                                                 </div>
 
 
                                                 <div class="col-md-6">
-                                                    <label for="InputText"><b>Email</b></label>
+                                                    <label for="InputText"><b>{{ $t('customer.email') }}</b></label>
                                                     <input type="email" class="form-control" id="exampleInputEmail"
-                                                        aria-describedby="emailHelp" placeholder="Enter Email Address"
+                                                        aria-describedby="emailHelp" :placeholder="$t('customer.enteremail')"
                                                         v-model="form.email">
                                                     <small class="text-danger" v-if="errors.email">{{ errors.email[0]
                                                     }}</small>
@@ -46,9 +46,9 @@
 
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                    <label for="InputText"><b>Address</b></label>
+                                                    <label for="InputText"><b>{{ $t('customer.address') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Address" v-model="form.address">
+                                                        :placeholder="$t('customer.enteraddress')" v-model="form.address">
                                                     <small class="text-danger" v-if="errors.address">{{
                                                             errors.address[0]
                                                     }}</small>
@@ -56,9 +56,9 @@
 
 
                                                 <div class="col-md-6">
-                                                    <label for="InputText"><b>Phone</b></label>
+                                                    <label for="InputText"><b>{{ $t('customer.phone') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Phone" v-model="form.phone">
+                                                        :placeholder="$t('customer.enterphone')" v-model="form.phone">
                                                     <small class="text-danger" v-if="errors.phone">{{ errors.phone[0]
                                                     }}</small>
                                                 </div>
@@ -75,8 +75,7 @@
                                                         @change="onFileSelected">
                                                     <small class="text-danger" v-if="errors.photo">{{ errors.photo[0]
                                                     }}</small>
-                                                    <label class="custom-file-label" for="customFile">Choose
-                                                        file</label>
+                                                    <label class="custom-file-label" for="customFile">{{ $t('customer.choosefile') }}</label>
 
                                                 </div>
 
@@ -91,7 +90,7 @@
 
 
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                            <button type="submit" class="btn btn-primary btn-block">{{ $t('customer.submit') }}</button>
                                         </div>
 
                                     </form>

@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/customer" class="btn btn-primary"> All Customer</router-link>
+                <router-link to="/customer" class="btn btn-primary"> {{ $t('customer.allcustomer') }}</router-link>
             </div>
         </div>
 
@@ -15,25 +15,25 @@
                             <div class="col-lg-12">
                                 <div class="login-form">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Customer Update</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">{{ $t('customer.customerupdate') }}</h1>
                                     </div>
                                     <form class="user" @submit.prevent="customerUpdate" enctype="mutlipart/form-dta">
                                         <div class="form-group">
 
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                     <label for="InputText"><b>Name</b></label>
+                                                     <label for="InputText"><b>{{ $t('customer.name') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Full Name" v-model="form.name">
+                                                        :placeholder="$t('customer.entername') " v-model="form.name">
                                                     <small class="text-danger" v-if="errors.name">{{ errors.name[0]
                                                     }}</small>
                                                 </div>
 
 
                                                 <div class="col-md-6">
-                                                     <label for="InputText"><b>Email</b></label>
+                                                     <label for="InputText"><b>{{ $t('customer.email') }}</b></label>
                                                     <input type="email" class="form-control" id="exampleInputEmail"
-                                                        aria-describedby="emailHelp" placeholder="Enter Email Address"
+                                                        aria-describedby="emailHelp" :placeholder="$t('customer.enteremail') "
                                                         v-model="form.email">
                                                     <small class="text-danger" v-if="errors.email">{{ errors.email[0]
                                                     }}</small>
@@ -47,17 +47,17 @@
                                             <div class="form-row">
 
                                                 <div class="col-md-6">
-                                                     <label for="InputText"><b>Phone</b></label>
+                                                     <label for="InputText"><b>{{ $t('customer.phone') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Phone" v-model="form.phone">
+                                                        :placeholder="$t('customer.enterphone') " v-model="form.phone">
                                                     <small class="text-danger" v-if="errors.phone">{{ errors.phone[0]
                                                     }}</small>
                                                 </div>
 
                                                 <div class="col-md-6">
-                                                     <label for="InputText"><b>Address</b></label>
+                                                     <label for="InputText"><b>{{ $t('customer.address') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Address" v-model="form.address">
+                                                        :placeholder="$t('customer.enteraddress') " v-model="form.address">
                                                     <small class="text-danger" v-if="errors.address">{{
                                                             errors.address[0]
                                                     }}</small>
@@ -78,8 +78,7 @@
                                                         @change="onFileSelected">
                                                     <small class="text-danger" v-if="errors.photo">{{ errors.photo[0]
                                                     }}</small>
-                                                    <label class="custom-file-label" for="customFile">Choose
-                                                        file</label>
+                                                    <label class="custom-file-label" for="customFile">{{ $t('customer.choosefile') }}</label>
 
                                                 </div>
 

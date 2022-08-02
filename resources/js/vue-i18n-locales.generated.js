@@ -354,8 +354,9 @@ export default {
             "customerlist":"قائمة الزبائن",
             "photo":"الصور",
             "action":"النشاط",
-            "Edit":"تعديل",
+            "edit":"تعديل",
             "delete":"حذف",
+            "allcustomer":"بيانات الزبائن",
 
             "customerupdate":"تحديث الزبائن",
             "update":"تحديث",
@@ -715,6 +716,7 @@ export default {
             "submit":"Submit",
             "available":"Available",
             "stockout":"Stock Out",
+            "allcustomer":"All Customer",
 
             "entername":"Enter Your Full Name",
             "enteremail":"Enter Email Address",

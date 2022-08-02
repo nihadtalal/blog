@@ -5111,7 +5111,7 @@ var render = function render() {
     attrs: {
       to: "/customer"
     }
-  }, [_vm._v("  " + _vm._s(_vm.$t("subsidebar.AddCustomer")))])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v("  " + _vm._s(_vm.$t("customer.allcustomer")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-center"
   }, [_c("div", {
     staticClass: "col-xl-6 col-lg-10 col-md-12"
@@ -5146,7 +5146,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(0), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.name")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5157,7 +5161,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Full Name"
+      placeholder: _vm.$t("customer.entername")
     },
     domProps: {
       value: _vm.form.name
@@ -5173,7 +5177,11 @@ var render = function render() {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.name[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.email")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5185,7 +5193,7 @@ var render = function render() {
       type: "email",
       id: "exampleInputEmail",
       "aria-describedby": "emailHelp",
-      placeholder: "Enter Email Address"
+      placeholder: _vm.$t("customer.enteremail")
     },
     domProps: {
       value: _vm.form.email
@@ -5205,7 +5213,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(2), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.address")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5216,7 +5228,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Address"
+      placeholder: _vm.$t("customer.enteraddress")
     },
     domProps: {
       value: _vm.form.address
@@ -5232,7 +5244,11 @@ var render = function render() {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.address[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(3), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.phone")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5243,7 +5259,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Phone"
+      placeholder: _vm.$t("customer.enterphone")
     },
     domProps: {
       value: _vm.form.phone
@@ -5279,7 +5295,7 @@ var render = function render() {
     attrs: {
       "for": "customFile"
     }
-  }, [_vm._v("Choose\n                                                    file")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v(_vm._s(_vm.$t("customer.choosefile")))])]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
   }, [_c("img", {
     staticStyle: {
@@ -5290,60 +5306,19 @@ var render = function render() {
       src: _vm.form.photo,
       alt: ""
     }
-  })])])]), _vm._v(" "), _vm._m(4)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
-    staticClass: "text-center"
-  })])])])])])])])]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Name")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Email")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Address")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Phone")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
+  })])])]), _vm._v(" "), _c("div", {
     staticClass: "form-group"
   }, [_c("button", {
     staticClass: "btn btn-primary btn-block",
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("Submit")])]);
-}];
+  }, [_vm._v(_vm._s(_vm.$t("customer.submit")))])])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+    staticClass: "text-center"
+  })])])])])])])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -5371,7 +5346,7 @@ var render = function render() {
     attrs: {
       to: "/customer"
     }
-  }, [_vm._v(" All Customer")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("customer.allcustomer")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-center"
   }, [_c("div", {
     staticClass: "col-xl-12 col-lg-12 col-md-12"
@@ -5385,7 +5360,11 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "login-form"
-  }, [_vm._m(0), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", {
+    staticClass: "h4 text-gray-900 mb-4"
+  }, [_vm._v(_vm._s(_vm.$t("customer.customerupdate")))])]), _vm._v(" "), _c("form", {
     staticClass: "user",
     attrs: {
       enctype: "mutlipart/form-dta"
@@ -5402,7 +5381,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.name")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5413,7 +5396,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Full Name"
+      placeholder: _vm.$t("customer.entername")
     },
     domProps: {
       value: _vm.form.name
@@ -5429,7 +5412,11 @@ var render = function render() {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.name[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(2), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.email")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5441,7 +5428,7 @@ var render = function render() {
       type: "email",
       id: "exampleInputEmail",
       "aria-describedby": "emailHelp",
-      placeholder: "Enter Email Address"
+      placeholder: _vm.$t("customer.enteremail")
     },
     domProps: {
       value: _vm.form.email
@@ -5461,7 +5448,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(3), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.phone")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5472,7 +5463,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Phone"
+      placeholder: _vm.$t("customer.enterphone")
     },
     domProps: {
       value: _vm.form.phone
@@ -5488,7 +5479,11 @@ var render = function render() {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.phone[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(4), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "InputText"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("customer.address")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5499,7 +5494,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Address"
+      placeholder: _vm.$t("customer.enteraddress")
     },
     domProps: {
       value: _vm.form.address
@@ -5535,7 +5530,7 @@ var render = function render() {
     attrs: {
       "for": "customFile"
     }
-  }, [_vm._v("Choose\n                                                    file")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v(_vm._s(_vm.$t("customer.choosefile")))])]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
   }, [_vm.display.photo ? _c("img", {
     staticStyle: {
@@ -5555,57 +5550,12 @@ var render = function render() {
       src: _vm.form.photo,
       alt: ""
     }
-  }) : _vm._e()])])]), _vm._v(" "), _vm._m(5)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+  }) : _vm._e()])])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
     staticClass: "text-center"
   })])])])])])])])]);
 };
 
 var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "text-center"
-  }, [_c("h1", {
-    staticClass: "h4 text-gray-900 mb-4"
-  }, [_vm._v("Customer Update")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Name")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Email")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Phone")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "InputText"
-    }
-  }, [_c("b", [_vm._v("Address")])]);
-}, function () {
   var _vm = this,
       _c = _vm._self._c;
 
@@ -5667,7 +5617,7 @@ var render = function render() {
     },
     attrs: {
       type: "text",
-      placeholder: "Search Here"
+      placeholder: _vm.$t("customer.searchcustomer")
     },
     domProps: {
       value: _vm.searchTerm
@@ -5684,11 +5634,17 @@ var render = function render() {
     staticClass: "col-lg-12 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("customer.customerlist")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (customer) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("customer.name")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("customer.photo")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("customer.phone")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("customer.email")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("customer.address")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("customer.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (customer) {
     return _c("tr", {
       key: customer.id
     }, [_c("td", [_vm._v(_vm._s(customer.name))]), _vm._v(" "), _c("td", [_c("img", {
@@ -5707,7 +5663,7 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("Edit")]), _vm._v(" "), _c("a", {
+    }, [_vm._v(_vm._s(_vm.$t("customer.edit")))]), _vm._v(" "), _c("a", {
       staticClass: "btn btn-sm btn-danger",
       staticStyle: {
         color: "white"
@@ -5717,29 +5673,13 @@ var render = function render() {
           return _vm.deleteCustomer(customer.id);
         }
       }
-    }, [_vm._v("Delete")])], 1)]);
+    }, [_vm._v(_vm._s(_vm.$t("customer.delete")))])], 1)]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Customer List")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Name")]), _vm._v(" "), _c("th", [_vm._v("Photo")]), _vm._v(" "), _c("th", [_vm._v("Phone")]), _vm._v(" "), _c("th", [_vm._v("Email")]), _vm._v(" "), _c("th", [_vm._v("Address")]), _vm._v(" "), _c("th", [_vm._v("Action")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -75181,8 +75121,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "customerlist": "قائمة الزبائن",
       "photo": "الصور",
       "action": "النشاط",
-      "Edit": "تعديل",
+      "edit": "تعديل",
       "delete": "حذف",
+      "allcustomer": "بيانات الزبائن",
       "customerupdate": "تحديث الزبائن",
       "update": "تحديث"
     } // "messages": {
@@ -75427,6 +75368,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "submit": "Submit",
       "available": "Available",
       "stockout": "Stock Out",
+      "allcustomer": "All Customer",
       "entername": "Enter Your Full Name",
       "enteremail": "Enter Email Address",
       "enterphone": "Enter Your Phone",
