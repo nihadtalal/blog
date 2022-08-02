@@ -15,7 +15,7 @@
 
             <div class="mb-4">
                 <input type="text" v-model="searchTerm" class="form-control" style="width:300px;"
-                    placeholder="Search Here">
+                    :placeholder="$t('salary.salarysearch')">
 
                 <!-- Search By Name -->
                 <!-- <input type="checkbox" v-model="checked" id="checkbox">
@@ -27,18 +27,18 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Employee List</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">{{ $t('salary.employeelist') }}</h6>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Photo</th>
-                                        <th>Phone</th>
-                                        <th>Salary</th>
-                                        <th>Joining Date</th>
-                                        <th>Action</th>
+                                        <th>{{ $t('salary.name') }}</th>
+                                        <th>{{ $t('salary.photo') }}</th>
+                                        <th>{{ $t('salary.Phone') }}</th>
+                                        <th>{{ $t('salary.salary') }}</th>
+                                        <th>{{ $t('salary.joiningdate') }}</th>
+                                        <th>{{ $t('salary.action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,7 +48,7 @@
                                         <td>{{ employee.phone }}</td>
                                         <td>{{ employee.salary }}</td>
                                         <td>{{ employee.joining_date }}</td>
-                                        <td><router-link :to="{name:'pay-salary', params: {id:employee.id}}" class="btn btn-sm btn-primary">Pay Salary</router-link>
+                                        <td><router-link :to="{name:'pay-salary', params: {id:employee.id}}" class="btn btn-sm btn-primary">{{ $t('salary.paysalary') }}</router-link>
                                         </td>
 
                                     </tr>

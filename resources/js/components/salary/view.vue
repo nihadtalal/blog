@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/salary" class="btn btn-primary"> GO Back</router-link>
+                <router-link to="/salary" class="btn btn-primary"> {{ $t('salary.back') }}</router-link>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
 
             <div class="mb-4">
                 <input type="text" v-model="searchTerm" class="form-control" style="width:300px;"
-                    placeholder="Search Here">
+                    :placeholder="$t('salary.salarysearch')">
 
                 <!-- Search By Name -->
                 <!-- <input type="checkbox" v-model="checked" id="checkbox">
@@ -27,17 +27,17 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Employee Salary Details</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">{{ $t('salary.employeesalarydetails') }}</h6>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Month</th>
-                                        <th>Amount</th>
-                                        <th>Date</th>
-                                        <th>Action</th>
+                                        <th>{{ $t('salary.name') }}</th>
+                                        <th>{{ $t('salary.month') }}</th>
+                                        <th>{{ $t('salary.amount') }}</th>
+                                        <th>{{ $t('salary.date') }}</th>
+                                        <th>{{ $t('salary.action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,7 +48,7 @@
                                         <td>{{ salary.amount }}</td>
                                         <td>{{ salary.salary_date }}</td>
                                         
-                                        <td><router-link :to="{name:'edit-salary', params: {id:salary.id}}" class="btn btn-sm btn-primary">Edit Salary</router-link>
+                                        <td><router-link :to="{name:'edit-salary', params: {id:salary.id}}" class="btn btn-sm btn-primary">{{ $t('salary.editsalary') }}</router-link>
                                         </td>
 
                                     </tr>

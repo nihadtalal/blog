@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/given-salary" class="btn btn-primary"> Pay Salary</router-link>
+                <router-link to="/given-salary" class="btn btn-primary"> {{ $t('salary.paysalary') }}</router-link>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
 
             <div class="mb-4">
                 <input type="text" v-model="searchTerm" class="form-control" style="width:300px;"
-                    placeholder="Search Here">
+                    :placeholder="$t('salary.salarysearch') ">
 
                 <!-- Search By Name -->
                 <!-- <input type="checkbox" v-model="checked" id="checkbox">
@@ -27,14 +27,14 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Salary Details</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">{{ $t('salary.salarydetails') }}</h6>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Month Name</th>
-                                         <th>Details</th>
+                                        <th>{{ $t('salary.monthname') }}</th>
+                                         <th>{{ $t('salary.details') }}</th>
                                         
                                     
                                     </tr>
@@ -43,7 +43,7 @@
                                     <tr v-for="salary in filtersearch" :key="salary.id">
                                         <td>{{ salary.salary_month }}</td>
                                     
-                                        <td><router-link :to="{name:'view-salary', params: {id:salary.salary_month}}" class="btn btn-sm btn-primary">View Salary</router-link>
+                                        <td><router-link :to="{name:'view-salary', params: {id:salary.salary_month}}" class="btn btn-sm btn-primary">{{ $t('salary.viewsalary') }}</router-link>
                                         </td>
 
                                     </tr>

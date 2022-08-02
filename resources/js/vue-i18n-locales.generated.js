@@ -228,6 +228,52 @@ export default {
             "update":"تحديث",
         },
 
+        "salary":{
+          
+            "salarydetails":"بيانات الرواتب",
+            "paysalary":"دفع الراتب",
+            "salarysearch":"بحث عن رواتب",
+            "details":"البيانات",
+            "monthname":"الاشهر",
+            "viewsalary":"عرض الراتب",
+            "employeesalarydetails":"بيانات رواتب الموظفين",
+
+
+            "employeelist":"قائمة رواتب الموظفين",
+            "name":"الاسم",
+            "photo":"الصور",
+            "Phone":"الرقم",
+            "Salary":"الراتب",
+            "joiningdate":"تاريخ الانضمام",
+
+            "email":"الايميل",
+            "name":"الاسم",
+            "salary":"الراتب",
+            "month":"الشهر",
+            "paynow":"ادفع الان",
+
+            "back":"الرجوع",
+            "amount":"الباقي",
+            "date":"التاريخ",
+            "action":"النشاط",
+            "editsalary":"تعديل الراتب",
+            "updatesalary":"تحديث الرواتب",
+            "update":"تحديث",
+
+            "january":"يناير",
+            "february":"فبراير",
+            "march":"مارس",
+            "april":"ابريل",
+            "may":"مايو",
+            "june":"يونيو",
+            "july":"يوليو",
+            "august":"اغسطس",
+            "september":"سبتمبر",
+            "october":"اكتوبر",
+            "november":"نوفمبر",
+            "december":"ديسمبر",
+        },
+
 
         // "messages": {
            
@@ -455,6 +501,56 @@ export default {
 
             "expenseupdate":"Expense Update",
             "update":"Update",
+        },
+
+        "salary":{
+          
+            "salarydetails":"Salary Details",
+            "paysalary":"Pay Salary",
+            "salarysearch":"Search Salary",
+            "details":"Details",
+            "monthname":"Month Name",
+            "viewsalary":"View Salary",
+            "employeesalarydetails":"Employee Salary Details",
+
+
+            "employeelist":"Salary List",
+            "name":"Name",
+            "photo":"Photo",
+            "Phone":"Phone",
+            "Salary":"salary",
+            "joiningdate":"Joining Date",
+
+            "email":"Email",
+            "name":"Name",
+            "salary":"Salary",
+            "month":"Month",
+            "paynow":"Pay Now",
+
+            "back":"Back",
+            "amount":"Amount",
+            "date":"Date",
+            "action":"Action",
+            "editsalary":"Edit Salary",
+            "updatesalary":"Update Salary",
+            "update":"Update",
+
+            "january":"January",
+            "february":"February",
+            "march":"March",
+            "april":"April",
+            "may":"May",
+            "june":"June",
+            "july":"July",
+            "august":"August",
+            "september":"September",
+            "october":"October",
+            "november":"November",
+            "december":"December",
+
+            
+
+
         },
 
 

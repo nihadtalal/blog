@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/salary" class="btn btn-primary"> Go Back</router-link>
+                <router-link to="/salary" class="btn btn-primary"> {{ $t('salary.back') }}</router-link>
             </div>
         </div>
 
@@ -15,14 +15,14 @@
                             <div class="col-lg-12">
                                 <div class="login-form">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Update Salary</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">{{ $t('salary.updatesalary') }}</h1>
                                     </div>
                                     <form class="user" @submit.prevent="SalaryUpdate">
                                         <div class="form-group">
 
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                     <label for="exampleFormControlSelect1"><b>Name</b></label>
+                                                     <label for="exampleFormControlSelect1"><b>{{ $t('salary.name') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
                                                         placeholder="Enter Your Full Name" v-model="form.name">
                                                     <small class="text-danger" v-if="errors.name">{{ errors.name[0]
@@ -31,7 +31,7 @@
 
 
                                                 <div class="col-md-6">
-                                                     <label for="exampleFormControlSelect1"><b>Email</b></label>
+                                                     <label for="exampleFormControlSelect1"><b>{{ $t('salary.email') }}</b></label>
                                                     <input type="email" class="form-control" id="exampleInputEmail"
                                                         aria-describedby="emailHelp" placeholder="Enter Email Address"
                                                         v-model="form.email">
@@ -46,21 +46,21 @@
 
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                    <label for="exampleFormControlSelect1"><b>Month</b></label>
+                                                    <label for="exampleFormControlSelect1"><b>{{ $t('salary.month') }}</b></label>
                                                     <select class="form-control" id="exampleFormControlSelect1"
                                                         v-model="form.salary_month">
-                                                        <option selected value='Janaury'>Janaury</option>
-                                                        <option value='February'>February</option>
-                                                        <option value='March'>March</option>
-                                                        <option value='April'>April</option>
-                                                        <option value='May'>May</option>
-                                                        <option value='June'>June</option>
-                                                        <option value='July'>July</option>
-                                                        <option value='August'>August</option>
-                                                        <option value='September'>September</option>
-                                                        <option value='October'>October</option>
-                                                        <option value='November'>November</option>
-                                                        <option value='December'>December</option>
+                                                        <option selected value='Janaury'>{{ $t('salary.january') }}</option>
+                                                        <option value='February'>{{ $t('salary.february') }}</option>
+                                                        <option value='March'>{{ $t('salary.march') }}</option>
+                                                        <option value='April'>{{ $t('salary.april') }}</option>
+                                                        <option value='May'>{{ $t('salary.may') }}</option>
+                                                        <option value='June'>{{ $t('salary.june') }}</option>
+                                                        <option value='July'>{{ $t('salary.july') }}</option>
+                                                        <option value='August'>{{ $t('salary.august') }}</option>
+                                                        <option value='September'>{{ $t('salary.september') }}</option>
+                                                        <option value='October'>{{ $t('salary.october') }}</option>
+                                                        <option value='November'>{{ $t('salary.november') }}</option>
+                                                        <option value='December'>{{ $t('salary.december') }}</option>
 
 
 
@@ -73,7 +73,7 @@
 
                                                 <input type="hidden" v-model="form.employee_id">
                                                 <div class="col-md-6">
-                                                     <label for="exampleFormControlSelect1"><b>Amount</b></label>
+                                                     <label for="exampleFormControlSelect1"><b>{{ $t('salary.amount') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
                                                         placeholder="Enter Your Amount" v-model="form.amount">
                                                     <small class="text-danger" v-if="errors.amount">{{ errors.amount[0]
@@ -88,7 +88,7 @@
 
 
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Update</button>
+                                            <button type="submit" class="btn btn-primary btn-block">{{ $t('salary.update') }}</button>
                                         </div>
 
                                     </form>

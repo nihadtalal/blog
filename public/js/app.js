@@ -9088,7 +9088,7 @@ var render = function render() {
     },
     attrs: {
       type: "text",
-      placeholder: "Search Here"
+      placeholder: _vm.$t("salary.salarysearch")
     },
     domProps: {
       value: _vm.searchTerm
@@ -9105,11 +9105,17 @@ var render = function render() {
     staticClass: "col-lg-12 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("salary.employeelist")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (employee) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("salary.name")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.photo")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.Phone")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.salary")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.joiningdate")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (employee) {
     return _c("tr", {
       key: employee.id
     }, [_c("td", [_vm._v(_vm._s(employee.name))]), _vm._v(" "), _c("td", [_c("img", {
@@ -9128,29 +9134,13 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("Pay Salary")])], 1)]);
+    }, [_vm._v(_vm._s(_vm.$t("salary.paysalary")))])], 1)]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Employee List")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Name")]), _vm._v(" "), _c("th", [_vm._v("Photo")]), _vm._v(" "), _c("th", [_vm._v("Phone")]), _vm._v(" "), _c("th", [_vm._v("Salary")]), _vm._v(" "), _c("th", [_vm._v("Joining Date")]), _vm._v(" "), _c("th", [_vm._v("Action")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -9192,7 +9182,11 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "login-form"
-  }, [_vm._m(0), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", {
+    staticClass: "h4 text-gray-900 mb-4"
+  }, [_vm._v(_vm._s(_vm.$t("salary.paysalary")))])]), _vm._v(" "), _c("form", {
     staticClass: "user",
     on: {
       submit: function submit($event) {
@@ -9206,7 +9200,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.name")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9233,7 +9231,11 @@ var render = function render() {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.name[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(2), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.email")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9265,7 +9267,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(3), _vm._v(" "), _c("select", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.month")))])]), _vm._v(" "), _c("select", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9293,55 +9299,59 @@ var render = function render() {
       selected: "",
       value: "Janaury"
     }
-  }, [_vm._v("Janaury")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.january")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "February"
     }
-  }, [_vm._v("February")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.february")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "March"
     }
-  }, [_vm._v("March")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.march")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "April"
     }
-  }, [_vm._v("April")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.april")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "May"
     }
-  }, [_vm._v("May")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.may")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "June"
     }
-  }, [_vm._v("June")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.june")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "July"
     }
-  }, [_vm._v("July")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.july")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "August"
     }
-  }, [_vm._v("August")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.august")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "September"
     }
-  }, [_vm._v("September")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.september")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "October"
     }
-  }, [_vm._v("October")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.october")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "November"
     }
-  }, [_vm._v("November")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.november")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "December"
     }
-  }, [_vm._v("December")])]), _vm._v(" "), _vm.errors.salary_month ? _c("small", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.december")))])]), _vm._v(" "), _vm.errors.salary_month ? _c("small", {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.salary_month[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(4), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.salary")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9366,69 +9376,19 @@ var render = function render() {
     }
   }), _vm._v(" "), _vm.errors.salary ? _c("small", {
     staticClass: "text-danger"
-  }, [_vm._v(_vm._s(_vm.errors.salary[0]))]) : _vm._e()])])]), _vm._v(" "), _vm._m(5)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
-    staticClass: "text-center"
-  })])])])])])])])]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "text-center"
-  }, [_c("h1", {
-    staticClass: "h4 text-gray-900 mb-4"
-  }, [_vm._v("Pay Salary")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Name")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Email")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Month")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Salary")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
+  }, [_vm._v(_vm._s(_vm.errors.salary[0]))]) : _vm._e()])])]), _vm._v(" "), _c("div", {
     staticClass: "form-group"
   }, [_c("button", {
     staticClass: "btn btn-primary btn-block",
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("Pay Now")])]);
-}];
+  }, [_vm._v(_vm._s(_vm.$t("salary.paynow")))])])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+    staticClass: "text-center"
+  })])])])])])])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -9456,7 +9416,7 @@ var render = function render() {
     attrs: {
       to: "/salary"
     }
-  }, [_vm._v(" Go Back")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("salary.back")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-center"
   }, [_c("div", {
     staticClass: "col-xl-12 col-lg-12 col-md-12"
@@ -9470,7 +9430,11 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "login-form"
-  }, [_vm._m(0), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", {
+    staticClass: "h4 text-gray-900 mb-4"
+  }, [_vm._v(_vm._s(_vm.$t("salary.updatesalary")))])]), _vm._v(" "), _c("form", {
     staticClass: "user",
     on: {
       submit: function submit($event) {
@@ -9484,7 +9448,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.name")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9511,7 +9479,11 @@ var render = function render() {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.name[0]))]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(2), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.email")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9543,7 +9515,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(3), _vm._v(" "), _c("select", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.month")))])]), _vm._v(" "), _c("select", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9571,51 +9547,51 @@ var render = function render() {
       selected: "",
       value: "Janaury"
     }
-  }, [_vm._v("Janaury")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.january")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "February"
     }
-  }, [_vm._v("February")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.february")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "March"
     }
-  }, [_vm._v("March")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.march")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "April"
     }
-  }, [_vm._v("April")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.april")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "May"
     }
-  }, [_vm._v("May")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.may")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "June"
     }
-  }, [_vm._v("June")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.june")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "July"
     }
-  }, [_vm._v("July")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.july")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "August"
     }
-  }, [_vm._v("August")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.august")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "September"
     }
-  }, [_vm._v("September")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.september")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "October"
     }
-  }, [_vm._v("October")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.october")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "November"
     }
-  }, [_vm._v("November")]), _vm._v(" "), _c("option", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.november")))]), _vm._v(" "), _c("option", {
     attrs: {
       value: "December"
     }
-  }, [_vm._v("December")])]), _vm._v(" "), _vm.errors.salary_month ? _c("small", {
+  }, [_vm._v(_vm._s(_vm.$t("salary.december")))])]), _vm._v(" "), _vm.errors.salary_month ? _c("small", {
     staticClass: "text-danger"
   }, [_vm._v(_vm._s(_vm.errors.salary_month[0]))]) : _vm._e()]), _vm._v(" "), _c("input", {
     directives: [{
@@ -9639,7 +9615,11 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
-  }, [_vm._m(4), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlSelect1"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("salary.amount")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -9664,69 +9644,19 @@ var render = function render() {
     }
   }), _vm._v(" "), _vm.errors.amount ? _c("small", {
     staticClass: "text-danger"
-  }, [_vm._v(_vm._s(_vm.errors.amount[0]))]) : _vm._e()])])]), _vm._v(" "), _vm._m(5)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
-    staticClass: "text-center"
-  })])])])])])])])]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "text-center"
-  }, [_c("h1", {
-    staticClass: "h4 text-gray-900 mb-4"
-  }, [_vm._v("Update Salary")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Name")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Email")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Month")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlSelect1"
-    }
-  }, [_c("b", [_vm._v("Amount")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
+  }, [_vm._v(_vm._s(_vm.errors.amount[0]))]) : _vm._e()])])]), _vm._v(" "), _c("div", {
     staticClass: "form-group"
   }, [_c("button", {
     staticClass: "btn btn-primary btn-block",
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("Update")])]);
-}];
+  }, [_vm._v(_vm._s(_vm.$t("salary.update")))])])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+    staticClass: "text-center"
+  })])])])])])])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -9754,7 +9684,7 @@ var render = function render() {
     attrs: {
       to: "/given-salary"
     }
-  }, [_vm._v(" Pay Salary")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("salary.paysalary")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "container-fluid",
     attrs: {
       id: "container-wrapper"
@@ -9776,7 +9706,7 @@ var render = function render() {
     },
     attrs: {
       type: "text",
-      placeholder: "Search Here"
+      placeholder: _vm.$t("salary.salarysearch")
     },
     domProps: {
       value: _vm.searchTerm
@@ -9793,11 +9723,17 @@ var render = function render() {
     staticClass: "col-lg-12 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("salary.salarydetails")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (salary) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("salary.monthname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.details")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (salary) {
     return _c("tr", {
       key: salary.id
     }, [_c("td", [_vm._v(_vm._s(salary.salary_month))]), _vm._v(" "), _c("td", [_c("router-link", {
@@ -9810,29 +9746,13 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("View Salary")])], 1)]);
+    }, [_vm._v(_vm._s(_vm.$t("salary.viewsalary")))])], 1)]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Salary Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Month Name")]), _vm._v(" "), _c("th", [_vm._v("Details")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -9860,7 +9780,7 @@ var render = function render() {
     attrs: {
       to: "/salary"
     }
-  }, [_vm._v(" GO Back")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("salary.back")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "container-fluid",
     attrs: {
       id: "container-wrapper"
@@ -9882,7 +9802,7 @@ var render = function render() {
     },
     attrs: {
       type: "text",
-      placeholder: "Search Here"
+      placeholder: _vm.$t("salary.salarysearch")
     },
     domProps: {
       value: _vm.searchTerm
@@ -9899,11 +9819,17 @@ var render = function render() {
     staticClass: "col-lg-12 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("salary.employeesalarydetails")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (salary) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("salary.name")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.month")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.amount")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.date")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("salary.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (salary) {
     return _c("tr", {
       key: salary.id
     }, [_c("td", [_vm._v(_vm._s(salary.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(salary.salary_month))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(salary.amount))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(salary.salary_date))]), _vm._v(" "), _c("td", [_c("router-link", {
@@ -9916,29 +9842,13 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("Edit Salary")])], 1)]);
+    }, [_vm._v(_vm._s(_vm.$t("salary.editsalary")))])], 1)]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Employee Salary Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Name")]), _vm._v(" "), _c("th", [_vm._v("Month")]), _vm._v(" "), _c("th", [_vm._v("Amount")]), _vm._v(" "), _c("th", [_vm._v("Date")]), _vm._v(" "), _c("th", [_vm._v("Action")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -75101,7 +75011,7 @@ var routes = [{
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var _expense;
+var _salary, _expense, _salary2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -75288,7 +75198,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "delete": "حذف",
       "expenseupdate": "تعديل المصروفات",
       "update": "تحديث"
-    } // "messages": {
+    },
+    "salary": (_salary = {
+      "salarydetails": "بيانات الرواتب",
+      "paysalary": "دفع الراتب",
+      "salarysearch": "بحث عن رواتب",
+      "details": "البيانات",
+      "monthname": "الاشهر",
+      "viewsalary": "عرض الراتب",
+      "employeesalarydetails": "بيانات رواتب الموظفين",
+      "employeelist": "قائمة رواتب الموظفين",
+      "name": "الاسم",
+      "photo": "الصور",
+      "Phone": "الرقم",
+      "Salary": "الراتب",
+      "joiningdate": "تاريخ الانضمام",
+      "email": "الايميل"
+    }, _defineProperty(_salary, "name", "الاسم"), _defineProperty(_salary, "salary", "الراتب"), _defineProperty(_salary, "month", "الشهر"), _defineProperty(_salary, "paynow", "ادفع الان"), _defineProperty(_salary, "back", "الرجوع"), _defineProperty(_salary, "amount", "الباقي"), _defineProperty(_salary, "date", "التاريخ"), _defineProperty(_salary, "action", "النشاط"), _defineProperty(_salary, "editsalary", "تعديل الراتب"), _defineProperty(_salary, "updatesalary", "تحديث الرواتب"), _defineProperty(_salary, "update", "تحديث"), _defineProperty(_salary, "january", "يناير"), _defineProperty(_salary, "february", "فبراير"), _defineProperty(_salary, "march", "مارس"), _defineProperty(_salary, "april", "ابريل"), _defineProperty(_salary, "may", "مايو"), _defineProperty(_salary, "june", "يونيو"), _defineProperty(_salary, "july", "يوليو"), _defineProperty(_salary, "august", "اغسطس"), _defineProperty(_salary, "september", "سبتمبر"), _defineProperty(_salary, "october", "اكتوبر"), _defineProperty(_salary, "november", "نوفمبر"), _defineProperty(_salary, "december", "ديسمبر"), _salary) // "messages": {
     //     "hello": "Hello {name}",
     // }
 
@@ -75465,6 +75391,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "expensedetails": "Expense Details",
       "expenseamount": "Expense Amount"
     }, _defineProperty(_expense, "expenseamount", "Enter Expense Amount"), _defineProperty(_expense, "submit", "Submit"), _defineProperty(_expense, "expensesearch", "Search Expense"), _defineProperty(_expense, "expenselist", "Expense List"), _defineProperty(_expense, "details", "Details Expense"), _defineProperty(_expense, "amount", "Amount Expense"), _defineProperty(_expense, "date", "Date Expense"), _defineProperty(_expense, "action", "Action"), _defineProperty(_expense, "edit", "Edit"), _defineProperty(_expense, "delete", "Delte"), _defineProperty(_expense, "expenseupdate", "Expense Update"), _defineProperty(_expense, "update", "Update"), _expense),
+    "salary": (_salary2 = {
+      "salarydetails": "Salary Details",
+      "paysalary": "Pay Salary",
+      "salarysearch": "Search Salary",
+      "details": "Details",
+      "monthname": "Month Name",
+      "viewsalary": "View Salary",
+      "employeesalarydetails": "Employee Salary Details",
+      "employeelist": "Salary List",
+      "name": "Name",
+      "photo": "Photo",
+      "Phone": "Phone",
+      "Salary": "salary",
+      "joiningdate": "Joining Date",
+      "email": "Email"
+    }, _defineProperty(_salary2, "name", "Name"), _defineProperty(_salary2, "salary", "Salary"), _defineProperty(_salary2, "month", "Month"), _defineProperty(_salary2, "paynow", "Pay Now"), _defineProperty(_salary2, "back", "Back"), _defineProperty(_salary2, "amount", "Amount"), _defineProperty(_salary2, "date", "Date"), _defineProperty(_salary2, "action", "Action"), _defineProperty(_salary2, "editsalary", "Edit Salary"), _defineProperty(_salary2, "updatesalary", "Update Salary"), _defineProperty(_salary2, "update", "Update"), _defineProperty(_salary2, "january", "January"), _defineProperty(_salary2, "february", "February"), _defineProperty(_salary2, "march", "March"), _defineProperty(_salary2, "april", "April"), _defineProperty(_salary2, "may", "May"), _defineProperty(_salary2, "june", "June"), _defineProperty(_salary2, "july", "July"), _defineProperty(_salary2, "august", "August"), _defineProperty(_salary2, "september", "September"), _defineProperty(_salary2, "october", "October"), _defineProperty(_salary2, "november", "November"), _defineProperty(_salary2, "december", "December"), _salary2),
     "auth": {
       "failed": "These credentials do not match our records.",
       "throttle": "Too many login attempts. Please try again in {seconds} seconds."
