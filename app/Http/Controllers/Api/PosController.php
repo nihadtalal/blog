@@ -9,20 +9,22 @@ use Illuminate\Support\Facades\DB;
 
 class PosController extends Controller
 {
-   public function  GetProduct($id){
+   public function  GetProduct($id)
+   {
 
-    $product = DB::table('products')
-                ->where('category_id',$id)
-                ->get();
-                return response()->json($product);
+      $product = DB::table('products')
+         ->where('category_id', $id)
+         ->get();
+      return response()->json($product);
    }
    //Post order
-   public function OrderDone(Request $request){
+   public function OrderDone(Request $request)
+   {
 
       $validateDate = $request->validate([
 
          'customer_id' => 'required',
-         'payby'=> 'required',
+         'payby' => 'required',
 
 
       ]);
@@ -44,69 +46,73 @@ class PosController extends Controller
       $order_id = DB::table('orders')->insertGetId($data);
 
       $contents = DB::table('pos')->get();
-      $odata= array();
-         foreach($contents as $content){
-            $odata['order_id'] = $order_id;
-            $odata['product_id'] = $content->pro_id;
-            $odata['pro_quantity'] = $content->pro_quantity;
-            $odata['product_price'] = $content->product_price;
-            $odata['sub_total'] = $content->sub_total;
-            DB::table('order_details')->insert($odata);
+      $odata = array();
+      foreach ($contents as $content) {
+         $odata['order_id'] = $order_id;
+         $odata['product_id'] = $content->pro_id;
+         $odata['pro_quantity'] = $content->pro_quantity;
+         $odata['product_price'] = $content->product_price;
+         $odata['sub_total'] = $content->sub_total;
+         DB::table('order_details')->insert($odata);
 
 
-            // DB::table('products')
-            //    ->where('id',$content->pro_id)
-            //    ->update(['product_quantity' => DB::raw('product_quantity -'.$content->pro_quantity)]);
+         // DB::table('products')
+         //    ->where('id',$content->pro_id)
+         //    ->update(['product_quantity' => DB::raw('product_quantity -'.$content->pro_quantity)]);
 
-               
-          
-         }
 
-         DB::table('pos')->delete();
-               return response('Done');
+      }
 
+      DB::table('pos')->delete();
+      return response('Done');
    }
 
    //Search Data by Date
 
-   public function SearchOrderDate(Request $request){
+   public function SearchOrderDate(Request $request)
+   {
       $orderdate = $request->date;
       $newdate = new DateTime($orderdate);
       $done = $newdate->format('d/m/Y');
 
       $order = DB::table('orders')
-      ->join('customers','orders.customer_id','customers.id')
-      ->select('customers.name','orders.*')
-      ->where('orders.order_date',$done)
-      ->get();
+         ->join('customers', 'orders.customer_id', 'customers.id')
+         ->select('customers.name', 'orders.*')
+         ->where('orders.order_date', $done)
+         ->get();
       return response()->json($order);
    }
 
-   public function TodaySell(){
+   public function TodaySell()
+   {
       $date = date('d/m/Y');
-      $sell = DB::table('orders')->where('order_date',$date)->sum('total');
+      $sell = DB::table('orders')->where('order_date', $date)->sum('total');
       return response()->json($sell);
    }
 
-   public function TodayIncome(){
+   public function TodayIncome()
+   {
       $date = date('d/m/Y');
-      $sell = DB::table('orders')->where('order_date',$date)->sum('pay');
+      $sell = DB::table('orders')->where('order_date', $date)->sum('pay');
       return response()->json($sell);
    }
 
-   public function TodayDue(){
+   public function TodayDue()
+   {
       $date = date('d/m/Y');
-      $sell = DB::table('orders')->where('order_date',$date)->sum('due');
+      $sell = DB::table('orders')->where('order_date', $date)->sum('due');
       return response()->json($sell);
    }
 
-   public function TodayExpense(){
+   public function TodayExpense()
+   {
       $date = date('d/m/Y');
-      $expense = DB::table('expenses')->where('expense_date',$date)->sum('amount');
+      $expense = DB::table('expenses')->where('expense_date', $date)->sum('amount');
       return response()->json($expense);
    }
-   public function TodayStockout(){
-      $product = DB::table('products')->where('product_quantity','<','1')->get();
+   public function TodayStockout()
+   {
+      $product = DB::table('products')->where('product_quantity', '<', '1')->get();
 
       return response()->json($product);
    }

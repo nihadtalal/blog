@@ -3093,7 +3093,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      date: new Date().toISOString().substr(0, 10),
+      date: '',
       orders: {}
     };
   },
