@@ -308,6 +308,63 @@ export default {
 
         },
 
+        "stock":{
+          
+            "searchstock":"بحث عن المخزون",
+            "addproduct":"اضافة منتج",
+            "stocklist":"قائمة المخزن",
+            "name":"الاسم",
+            "code":"باركود",
+            "photo":"الصور",
+            "category":"الصنف",
+            "buyingprice":"سعر الشراء",
+            "status":"الحالة",
+            "quantity":"الكمية",
+            "action":"النشاط",
+            "edit":"تعديل",
+            "available":"متوفر",
+            "stockout":"غير متوفر",
+            "enterstockproduct":"ادخل كمية المنتج",
+
+            "back":"رجوع",
+            "stockupdate":"تحديث الكمية المخزونة",
+            "productstock":"كمية الانتاج",
+            "update":"تحديث"
+            
+
+        },
+
+        "customer":{
+          
+            "name":"الاسم",
+            "email":"الايميل",
+            "phone":"رقم الهاتف",
+            "address":"العنوان",
+            "choosefile":"اختر الملف",
+            "submit":"اضافة",
+
+
+            "entername":"ادخل اسمك الكامل",
+            "enteremail":"ادخل الايميل",
+            "enterphone":"ادخل رقم الهاتف",
+            "enteraddress":"ادخل عنوانك",
+           
+
+            "searchcustomer":"بحث عن الزبون",
+            "customerlist":"قائمة الزبائن",
+            "photo":"الصور",
+            "action":"النشاط",
+            "Edit":"تعديل",
+            "delete":"حذف",
+
+            "customerupdate":"تحديث الزبائن",
+            "update":"تحديث",
+
+           
+            
+
+        },
+
 
         // "messages": {
            
@@ -618,6 +675,65 @@ export default {
             "payamount":"Pay Amount",
             "dueamount":"Pay Amount",
             "searchbydate":"Search By Date",
+            
+
+        },
+
+        "stock":{
+          
+            "searchstock":"Search Stock",
+            "addproduct":"Add Product",
+            "stocklist":"Stock List",
+            "name":"Name",
+            "code":"Code",
+            "photo":"Photo",
+            "category":"Category",
+            "buyingprice":"Buying Price",
+            "status":"Status",
+            "quantity":"Quantity",
+            "action":"Action",
+            "Edit":"edit",
+            "available":"Available",
+            "stockout":"Stock Out",
+            "enterstockproduct":"Enter Stock Product",
+
+            "back":"Back",
+            "stockupdate":"Stock Update",
+            "productstock":"Product Stock",
+            "update":"Upadte"
+            
+
+        },
+
+        "customer":{
+          
+            "name":"Name",
+            "email":"Email",
+            "phone":"Phone",
+            "address":"Address",
+            "choosefile":"Choose file",
+            "submit":"Submit",
+            "available":"Available",
+            "stockout":"Stock Out",
+
+            "entername":"Enter Your Full Name",
+            "enteremail":"Enter Email Address",
+            "enterphone":"Enter Your Phone",
+            "enteraddress":"Enter Your Adress",
+          
+
+
+            "searchcustomer":"Search Customer",
+            "customerlist":"Customer List",
+            "photo":"Photo",
+            "action":"Action",
+            "edit":"Edit",
+            "delete":"Delete",
+
+            "customerupdate":"Customer Update",
+            "update":"Update",
+
+           
             
 
         },

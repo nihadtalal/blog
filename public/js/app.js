@@ -8264,7 +8264,7 @@ var render = function render() {
     attrs: {
       to: "/stock"
     }
-  }, [_vm._v(" Go Back")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("stock.back")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-center"
   }, [_c("div", {
     staticClass: "col-xl-12 col-lg-12 col-md-12"
@@ -8278,7 +8278,11 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "login-form"
-  }, [_vm._m(0), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", {
+    staticClass: "h4 text-gray-900 mb-4"
+  }, [_vm._v(_vm._s(_vm.$t("stock.stockupdate")))])]), _vm._v(" "), _c("form", {
     staticClass: "user",
     on: {
       submit: function submit($event) {
@@ -8292,7 +8296,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-12"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "product_quantity"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("stock.productstock")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -8303,7 +8311,7 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "exampleInputFirstName",
-      placeholder: "Enter Your Product Name"
+      placeholder: _vm.$t("stock.enterstockproduct")
     },
     domProps: {
       value: _vm.form.product_quantity
@@ -8317,42 +8325,19 @@ var render = function render() {
     }
   }), _vm._v(" "), _vm.errors.product_quantity ? _c("small", {
     staticClass: "text-danger"
-  }, [_vm._v(_vm._s(_vm.errors.product_quantity[0]))]) : _vm._e()])])]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
-    staticClass: "text-center"
-  })])])])])])])])]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "text-center"
-  }, [_c("h1", {
-    staticClass: "h4 text-gray-900 mb-4"
-  }, [_vm._v("Stock Update")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "product_quantity"
-    }
-  }, [_c("b", [_vm._v("Product Stock")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
+  }, [_vm._v(_vm._s(_vm.errors.product_quantity[0]))]) : _vm._e()])])]), _vm._v(" "), _c("div", {
     staticClass: "form-group"
   }, [_c("button", {
     staticClass: "btn btn-primary btn-block",
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("Update")])]);
-}];
+  }, [_vm._v(_vm._s(_vm.$t("stock.update")))])])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+    staticClass: "text-center"
+  })])])])])])])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -8884,7 +8869,7 @@ var render = function render() {
     attrs: {
       to: "/store-employee"
     }
-  }, [_vm._v(" Add Product")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("stock.addproduct")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "container-fluid",
     attrs: {
       id: "container-wrapper"
@@ -8906,7 +8891,7 @@ var render = function render() {
     },
     attrs: {
       type: "text",
-      placeholder: "Search Here"
+      placeholder: _vm.$t("stock.addproduct")
     },
     domProps: {
       value: _vm.searchTerm
@@ -8923,11 +8908,17 @@ var render = function render() {
     staticClass: "col-lg-12 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("stock.stocklist")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (product) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("stock.name")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.code")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.photo")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.category")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.buyingprice")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.status")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.quantity")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("stock.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (product) {
     return _c("tr", {
       key: product.id
     }, [_c("td", [_vm._v(_vm._s(product.product_name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(product.product_code))]), _vm._v(" "), _c("td", [_c("img", {
@@ -8938,9 +8929,9 @@ var render = function render() {
       }
     })]), _vm._v(" "), _c("td", [_vm._v(_vm._s(product.category_name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(product.buying_price))]), _vm._v(" "), product.product_quantity >= 1 ? _c("td", [_c("span", {
       staticClass: "badge badge-success"
-    }, [_vm._v("Available")])]) : _c("td", [_c("span", {
+    }, [_vm._v(_vm._s(_vm.$t("stock.available")))])]) : _c("td", [_c("span", {
       staticClass: "badge badge-danger"
-    }, [_vm._v("Stock Out")])]), _vm._v(" "), _c("td", [_vm._v(_vm._s(product.product_quantity))]), _vm._v(" "), _c("td", [_c("router-link", {
+    }, [_vm._v(_vm._s(_vm.$t("stock.stockout")))])]), _vm._v(" "), _c("td", [_vm._v(_vm._s(product.product_quantity))]), _vm._v(" "), _c("td", [_c("router-link", {
       staticClass: "btn btn-sm btn-primary",
       attrs: {
         to: {
@@ -8950,29 +8941,13 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("Edit")])], 1)]);
+    }, [_vm._v(_vm._s(_vm.$t("stock.edit")))])], 1)]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Stock List")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Name")]), _vm._v(" "), _c("th", [_vm._v("Code")]), _vm._v(" "), _c("th", [_vm._v("Photo")]), _vm._v(" "), _c("th", [_vm._v("Category")]), _vm._v(" "), _c("th", [_vm._v("Buying Price")]), _vm._v(" "), _c("th", [_vm._v("Status")]), _vm._v(" "), _c("th", [_vm._v("Quantity")]), _vm._v(" "), _c("th", [_vm._v("Action")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -75169,7 +75144,48 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "qty": "كمية",
       "subtotal": "مجموع الكميات",
       "vat": "الخصم"
-    }, _defineProperty(_order, "total", "المجموع بعد خصم"), _defineProperty(_order, "phone", "الرقم"), _defineProperty(_order, "address", "العنوان"), _defineProperty(_order, "date", "التاريخ"), _defineProperty(_order, "paythrough", "الدفع بواسطة"), _defineProperty(_order, "payamount", "مبلغ الدفع"), _defineProperty(_order, "dueamount", "مبلغ المستحق"), _defineProperty(_order, "searchbydate", "بحث عن طريق التاريخ"), _order) // "messages": {
+    }, _defineProperty(_order, "total", "المجموع بعد خصم"), _defineProperty(_order, "phone", "الرقم"), _defineProperty(_order, "address", "العنوان"), _defineProperty(_order, "date", "التاريخ"), _defineProperty(_order, "paythrough", "الدفع بواسطة"), _defineProperty(_order, "payamount", "مبلغ الدفع"), _defineProperty(_order, "dueamount", "مبلغ المستحق"), _defineProperty(_order, "searchbydate", "بحث عن طريق التاريخ"), _order),
+    "stock": {
+      "searchstock": "بحث عن المخزون",
+      "addproduct": "اضافة منتج",
+      "stocklist": "قائمة المخزن",
+      "name": "الاسم",
+      "code": "باركود",
+      "photo": "الصور",
+      "category": "الصنف",
+      "buyingprice": "سعر الشراء",
+      "status": "الحالة",
+      "quantity": "الكمية",
+      "action": "النشاط",
+      "edit": "تعديل",
+      "available": "متوفر",
+      "stockout": "غير متوفر",
+      "enterstockproduct": "ادخل كمية المنتج",
+      "back": "رجوع",
+      "stockupdate": "تحديث الكمية المخزونة",
+      "productstock": "كمية الانتاج",
+      "update": "تحديث"
+    },
+    "customer": {
+      "name": "الاسم",
+      "email": "الايميل",
+      "phone": "رقم الهاتف",
+      "address": "العنوان",
+      "choosefile": "اختر الملف",
+      "submit": "اضافة",
+      "entername": "ادخل اسمك الكامل",
+      "enteremail": "ادخل الايميل",
+      "enterphone": "ادخل رقم الهاتف",
+      "enteraddress": "ادخل عنوانك",
+      "searchcustomer": "بحث عن الزبون",
+      "customerlist": "قائمة الزبائن",
+      "photo": "الصور",
+      "action": "النشاط",
+      "Edit": "تعديل",
+      "delete": "حذف",
+      "customerupdate": "تحديث الزبائن",
+      "update": "تحديث"
+    } // "messages": {
     //     "hello": "Hello {name}",
     // }
 
@@ -75381,6 +75397,49 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "subtotal": "Sub Total",
       "vat": "Vat"
     }, _defineProperty(_order2, "total", "Total"), _defineProperty(_order2, "pay", "pay"), _defineProperty(_order2, "due", "Due"), _defineProperty(_order2, "phone", "Phone"), _defineProperty(_order2, "address", "Address"), _defineProperty(_order2, "date", "Date"), _defineProperty(_order2, "paythrough", "Pay Through"), _defineProperty(_order2, "payamount", "Pay Amount"), _defineProperty(_order2, "dueamount", "Pay Amount"), _defineProperty(_order2, "searchbydate", "Search By Date"), _order2),
+    "stock": {
+      "searchstock": "Search Stock",
+      "addproduct": "Add Product",
+      "stocklist": "Stock List",
+      "name": "Name",
+      "code": "Code",
+      "photo": "Photo",
+      "category": "Category",
+      "buyingprice": "Buying Price",
+      "status": "Status",
+      "quantity": "Quantity",
+      "action": "Action",
+      "Edit": "edit",
+      "available": "Available",
+      "stockout": "Stock Out",
+      "enterstockproduct": "Enter Stock Product",
+      "back": "Back",
+      "stockupdate": "Stock Update",
+      "productstock": "Product Stock",
+      "update": "Upadte"
+    },
+    "customer": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "choosefile": "Choose file",
+      "submit": "Submit",
+      "available": "Available",
+      "stockout": "Stock Out",
+      "entername": "Enter Your Full Name",
+      "enteremail": "Enter Email Address",
+      "enterphone": "Enter Your Phone",
+      "enteraddress": "Enter Your Adress",
+      "searchcustomer": "Search Customer",
+      "customerlist": "Customer List",
+      "photo": "Photo",
+      "action": "Action",
+      "edit": "Edit",
+      "delete": "Delete",
+      "customerupdate": "Customer Update",
+      "update": "Update"
+    },
     "auth": {
       "failed": "These credentials do not match our records.",
       "throttle": "Too many login attempts. Please try again in {seconds} seconds."

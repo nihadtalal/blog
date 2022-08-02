@@ -3,19 +3,19 @@
 
         <div>
             <div class="row">
-                <router-link to="/store-employee" class="btn btn-primary"> Add Product</router-link>
+                <router-link to="/store-employee" class="btn btn-primary"> {{ $t('stock.addproduct') }}</router-link>
             </div>
         </div>
 
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                
+
             </div>
 
             <div class="mb-4">
                 <input type="text" v-model="searchTerm" class="form-control" style="width:300px;"
-                    placeholder="Search Here">
+                    :placeholder="$t('stock.addproduct') ">
 
                 <!-- Search By Name -->
                 <!-- <input type="checkbox" v-model="checked" id="checkbox">
@@ -27,20 +27,20 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Stock List</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">{{ $t('stock.stocklist') }}</h6>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Code</th>
-                                        <th>Photo</th>
-                                           <th>Category</th>
-                                        <th>Buying Price</th>
-                                          <th>Status</th>
-                                        <th>Quantity</th>
-                                        <th>Action</th>
+                                        <th>{{ $t('stock.name') }}</th>
+                                        <th>{{ $t('stock.code') }}</th>
+                                        <th>{{ $t('stock.photo') }}</th>
+                                        <th>{{ $t('stock.category') }}</th>
+                                        <th>{{ $t('stock.buyingprice') }}</th>
+                                        <th>{{ $t('stock.status') }}</th>
+                                        <th>{{ $t('stock.quantity') }}</th>
+                                        <th>{{ $t('stock.action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,11 +50,14 @@
                                         <td><img :src="product.image" id="em_photo" alt=""></td>
                                         <td>{{ product.category_name }}</td>
                                         <td>{{ product.buying_price }}</td>
-                                         <td v-if="product.product_quantity >=1"><span class="badge badge-success">Available</span></td>
-                                          <td v-else><span class="badge badge-danger">Stock Out</span></td>
+                                        <td v-if="product.product_quantity >= 1"><span
+                                                class="badge badge-success">{{ $t('stock.available') }}</span></td>
+                                        <td v-else><span class="badge badge-danger">{{ $t('stock.stockout') }}</span></td>
                                         <td>{{ product.product_quantity }}</td>
-                                        <td><router-link :to="{name:'edit-stock', params: {id:product.id}}" class="btn btn-sm btn-primary">Edit</router-link>
-                                          
+                                        <td>
+                                            <router-link :to="{ name: 'edit-stock', params: { id: product.id } }"
+                                                class="btn btn-sm btn-primary">{{ $t('stock.edit') }}</router-link>
+
                                         </td>
 
                                     </tr>
@@ -117,7 +120,7 @@ export default {
                 ))
                 .catch()
         },
-      
+
     },
     created() {
         this.allProduct();

@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/stock" class="btn btn-primary"> Go Back</router-link>
+                <router-link to="/stock" class="btn btn-primary"> {{ $t('stock.back') }}</router-link>
             </div>
         </div>
 
@@ -15,16 +15,16 @@
                             <div class="col-lg-12">
                                 <div class="login-form">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Stock Update</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">{{ $t('stock.stockupdate') }}</h1>
                                     </div>
                                     <form class="user" @submit.prevent="StockUpdate">
                                         <div class="form-group">
 
                                             <div class="form-row">
                                                 <div class="col-md-12">
-                                                    <label for="product_quantity"><b>Product Stock</b></label>
+                                                    <label for="product_quantity"><b>{{ $t('stock.productstock') }}</b></label>
                                                     <input type="text" class="form-control" id="exampleInputFirstName"
-                                                        placeholder="Enter Your Product Name"
+                                                        :placeholder=" $t('stock.enterstockproduct') "
                                                         v-model="form.product_quantity">
                                                     <small class="text-danger" v-if="errors.product_quantity">{{
                                                             errors.product_quantity[0]
@@ -38,7 +38,7 @@
                             
 
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Update</button>
+                                            <button type="submit" class="btn btn-primary btn-block">{{ $t('stock.update') }}</button>
                                         </div>
 
                                     </form>
