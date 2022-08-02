@@ -3,7 +3,7 @@
 
         <div>
             <div class="row">
-                <router-link to="/order" class="btn btn-primary"> Go Back</router-link>
+                <router-link to="/order" class="btn btn-primary"> {{ $t('order.back') }}</router-link>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
                             <div class="col-lg-12">
                                 <div class="login-form">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Order Details</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">{{ $t('order.orderdetails') }}</h1>
                                     </div>
 
                                     <hr>
@@ -27,15 +27,19 @@
                                             <div class="card">
                                                 <div
                                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                                    <h6 class="m-0 font-weight-bold text-primary">Order Details</h6>
+                                                
                                                 </div>
                                                 <div class="table-responsive">
                                                     <ul class="list-group">
-                                                        <li class="list-group-item"><b>Name:</b> {{ orders.name }} </li>
-                                                       <li class="list-group-item"><b>Phone:</b> {{ orders.phone }} </li>
-                                                         <li class="list-group-item"><b>Address:</b> {{ orders.address }} </li>
-                                                        <li class="list-group-item"><b>Date:</b> {{ orders.order_date }} </li>
-                                                     <li class="list-group-item"><b>Pay Through:</b> {{ orders.payby }} </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.name') }}:</b> {{ orders.name }} </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.phone') }}:</b> {{ orders.phone }}
+                                                        </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.address') }}:</b> {{ orders.address }}
+                                                        </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.date') }}:</b> {{ orders.order_date }}
+                                                        </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.paythrough') }}:</b> {{ orders.payby
+                                                        }} </li>
                                                     </ul>
                                                 </div>
                                                 <div class="card-footer"></div>
@@ -48,16 +52,24 @@
                                             <div class="card">
                                                 <div
                                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                                    <h6 class="m-0 font-weight-bold text-primary">Order Details</h6>
+                                                
                                                 </div>
                                                 <div class="table-responsive">
                                                     <ul class="list-group">
-                                                       <li class="list-group-item"><b>Sub Total:</b> {{ Number(orders.sub_total).toLocaleString() }} IQ </li>
-                                                       <li class="list-group-item"><b>Vat:</b> {{ orders.vat }} </li>
-                                                       <li class="list-group-item"><b>Total:</b> {{ Number(orders.total).toLocaleString() }} IQ </li>
-                                                         <li class="list-group-item"><b>Pay Amount:</b> {{ Number(orders.pay).toLocaleString() }} IQ </li>
-                                                        
-                                                     <li class="list-group-item"><b>Due Amount:</b> {{ Number(orders.due).toLocaleString() }} IQ </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.subtotal') }}:</b> {{
+                                                                Number(orders.sub_total).toLocaleString()
+                                                        }} IQ </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.vat') }}:</b> {{ orders.vat }} </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.total') }}:</b> {{
+                                                                Number(orders.total).toLocaleString()
+                                                        }} IQ </li>
+                                                        <li class="list-group-item"><b>{{ $t('order.payamount') }}:</b> {{
+                                                                Number(orders.pay).toLocaleString()
+                                                        }} IQ </li>
+
+                                                        <li class="list-group-item"><b>{{ $t('order.dueamount') }}:</b> {{
+                                                                Number(orders.due).toLocaleString()
+                                                        }} IQ </li>
                                                     </ul>
                                                 </div>
                                                 <div class="card-footer"></div>
@@ -71,32 +83,34 @@
                                             <div class="card">
                                                 <div
                                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                                    <h6 class="m-0 font-weight-bold text-primary">Order Details</h6>
                                                 </div>
                                                 <div class="table-responsive">
                                                     <table class="table align-items-center table-flush">
                                                         <thead class="thead-light">
                                                             <tr>
-                                                                <th>Product Name</th>
-                                                                <th>Product Code</th>
-                                                                <th>Image</th>
-                                                                <th>Qty</th>
-                                                                <th>Unit Price</th>
-                                                                  <th>Total</th>
+                                                                <th>{{ $t('order.productname') }}</th>
+                                                                <th>{{ $t('order.productcode') }}</th>
+                                                                <th>{{ $t('order.image') }}</th>
+                                                                <th>{{ $t('order.qty') }}</th>
+                                                                <th>{{ $t('order.unitprice') }}</th>
+                                                                <th>{{ $t('order.total') }}</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr v-for = "detail in details" :key="detail.id">
+                                                            <tr v-for="detail in details" :key="detail.id">
                                                                 <td>{{ detail.product_name }}</td>
                                                                 <td>{{ detail.product_code }}</td>
-                                                                  <td><img :src="'/'+detail.image" id="em_photo" alt=""></td>
-                                                                  <td>{{ detail.pro_quantity }}</td>
-                                                                  <td>{{ Number(detail.product_price).toLocaleString() }} IQ</td>
-                                                                  <td>{{ Number(detail.sub_total).toLocaleString() }} IQ</td>
-                                                                
-                                                                
+                                                                <td><img :src="'/' + detail.image" id="em_photo" alt="">
+                                                                </td>
+                                                                <td>{{ detail.pro_quantity }}</td>
+                                                                <td>{{ Number(detail.product_price).toLocaleString() }}
+                                                                    IQ</td>
+                                                                <td>{{ Number(detail.sub_total).toLocaleString() }} IQ
+                                                                </td>
+
+
                                                             </tr>
-                                                            
+
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -165,10 +179,8 @@ export default {
 </script>
 
 <style type="text/css" scoped>
-
 #em_photo {
     height: 40px;
     width: 40px;
 }
-
 </style>

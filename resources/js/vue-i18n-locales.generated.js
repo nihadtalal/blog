@@ -274,6 +274,40 @@ export default {
             "december":"ديسمبر",
         },
 
+        "order":{
+          
+            "searchorder":"بحث عن طلبات",
+            "todayorder":"الطلبات اليوم",
+            "name":"الاسم",
+            "totalamount":"المبلغ الاجمالي",
+            "pay":"الدفع",
+            "due":"الباقي",
+            "payby":"طريقة الدفع",
+            "action":"النشاط",
+            "view":"عرض",
+
+            "orderdetails":"بيانات الطلبات",
+            "search":"بحث",
+            "productname":"اسم المنتج",
+            "productcode":"باركود المنتج",
+            "image":"الصور",
+            "unitprice":"سعر الوحدة",
+            "total":"المجموع",
+            "qty":"كمية",
+            "subtotal":"مجموع الكميات",
+            "vat":"الخصم",
+            "total":"المجموع بعد خصم",
+            "phone":"الرقم",
+            "address":"العنوان",
+            "date":"التاريخ",
+            "paythrough":"الدفع بواسطة",
+            "payamount":"مبلغ الدفع",
+            "dueamount":"مبلغ المستحق",
+            "searchbydate":"بحث عن طريق التاريخ",
+            
+
+        },
+
 
         // "messages": {
            
@@ -550,6 +584,41 @@ export default {
 
             
 
+
+        },
+        "order":{
+          
+            "searchorder":"Search Order",
+            "todayorder":"Today Order",
+            "name":"Name",
+            "totalamount":"Total Amount",
+
+            
+            "payby":"Payby",
+            "action":"action",
+            "view":"View",
+
+            "orderdetails":"Order Details",
+            "search":"Search",
+            "productname":"Product Name",
+            "productcode":"Product Code",
+            "image":"Image",
+            "unitprice":"Unit Price",
+            "total":"Total",
+            "qty":"Qty",
+            "subtotal":"Sub Total",
+            "vat":"Vat",
+            "total":"Total",
+            "pay":"pay",
+            "due":"Due",
+            "phone":"Phone",
+            "address":"Address",
+            "date":"Date",
+            "paythrough":"Pay Through",
+            "payamount":"Pay Amount",
+            "dueamount":"Pay Amount",
+            "searchbydate":"Search By Date",
+            
 
         },
 

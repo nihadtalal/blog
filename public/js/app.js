@@ -7078,7 +7078,7 @@ var render = function render() {
     },
     attrs: {
       type: "text",
-      placeholder: "Search Here"
+      placeholder: _vm.$t("order.searchorder")
     },
     domProps: {
       value: _vm.searchTerm
@@ -7095,11 +7095,17 @@ var render = function render() {
     staticClass: "col-lg-12 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("order.todayorder")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (order) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("order.name")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.totalamount")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.pay")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.due")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.payby")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.action")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.filtersearch, function (order) {
     return _c("tr", {
       key: order.id
     }, [_c("td", [_vm._v(_vm._s(order.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.total).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.pay).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.due).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(order.payby))]), _vm._v(" "), _c("td", [_c("router-link", {
@@ -7112,29 +7118,13 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("View")])], 1)]);
+    }, [_vm._v(_vm._s(_vm.$t("order.view")))])], 1)]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Today Order")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Name")]), _vm._v(" "), _c("th", [_vm._v("Total Account")]), _vm._v(" "), _c("th", [_vm._v("Pay")]), _vm._v(" "), _c("th", [_vm._v("Due")]), _vm._v(" "), _c("th", [_vm._v("PayBy")]), _vm._v(" "), _c("th", [_vm._v("Action")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -7162,7 +7152,7 @@ var render = function render() {
     attrs: {
       to: "/order"
     }
-  }, [_vm._v(" Today Order")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("order.todayorder")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-center"
   }, [_c("div", {
     staticClass: "col-xl-6 col-lg-10 col-md-12"
@@ -7176,7 +7166,11 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "login-form"
-  }, [_vm._m(0), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", {
+    staticClass: "h4 text-gray-900 mb-4"
+  }, [_vm._v(_vm._s(_vm.$t("order.searchorder")))])]), _vm._v(" "), _c("form", {
     staticClass: "user",
     attrs: {
       enctype: "mutlipart/form-dta"
@@ -7193,7 +7187,11 @@ var render = function render() {
     staticClass: "form-row"
   }, [_c("div", {
     staticClass: "col-md-12"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("label", {
+    attrs: {
+      "for": "exampleFormControlDate"
+    }
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.searchbydate")))])]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -7215,7 +7213,14 @@ var render = function render() {
         _vm.date = $event.target.value;
       }
     }
-  })])])]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "form-group"
+  }, [_c("button", {
+    staticClass: "btn btn-primary btn-block",
+    attrs: {
+      type: "submit"
+    }
+  }, [_vm._v(_vm._s(_vm.$t("order.search")))])])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
     staticClass: "text-center"
   })])])])])]), _vm._v(" "), _c("div", {
     staticClass: "card shadow-sm my-5"
@@ -7227,11 +7232,17 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(3), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }, [_c("h6", {
+    staticClass: "m-0 font-weight-bold text-primary"
+  }, [_vm._v(_vm._s(_vm.$t("order.orderdetails")))])]), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(4), _vm._v(" "), _c("tbody", _vm._l(_vm.orders, function (order) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("order.productname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.qty")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.subtotal")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.vat")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.total")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.pay")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.due")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.orders, function (order) {
     return _c("tr", {
       key: order.id
     }, [_c("td", [_vm._v(_vm._s(order.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(order.qty))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.sub_total).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(order.vat))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.total).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.pay).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(order.due).toLocaleString()) + " IQ")])]);
@@ -7240,53 +7251,7 @@ var render = function render() {
   })])])])])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "text-center"
-  }, [_c("h1", {
-    staticClass: "h4 text-gray-900 mb-4"
-  }, [_vm._v("Search Order")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("label", {
-    attrs: {
-      "for": "exampleFormControlDate"
-    }
-  }, [_c("b", [_vm._v("Search By Date")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "form-group"
-  }, [_c("button", {
-    staticClass: "btn btn-primary btn-block",
-    attrs: {
-      type: "submit"
-    }
-  }, [_vm._v("Search")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Order Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Product Name")]), _vm._v(" "), _c("th", [_vm._v("Qty")]), _vm._v(" "), _c("th", [_vm._v("SubTotal")]), _vm._v(" "), _c("th", [_vm._v("Vat")]), _vm._v(" "), _c("th", [_vm._v("Total")]), _vm._v(" "), _c("th", [_vm._v("Pay")]), _vm._v(" "), _c("th", [_vm._v("Due")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -7314,7 +7279,7 @@ var render = function render() {
     attrs: {
       to: "/order"
     }
-  }, [_vm._v(" Go Back")])], 1)]), _vm._v(" "), _c("div", {
+  }, [_vm._v(" " + _vm._s(_vm.$t("order.back")))])], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-center"
   }, [_c("div", {
     staticClass: "col-xl-6 col-lg-10 col-md-12"
@@ -7328,57 +7293,69 @@ var render = function render() {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "login-form"
-  }, [_vm._m(0), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", {
+    staticClass: "h4 text-gray-900 mb-4"
+  }, [_vm._v(_vm._s(_vm.$t("order.orderdetails")))])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-lg-6 mb-4"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(1), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("ul", {
     staticClass: "list-group"
   }, [_c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Name:")]), _vm._v(" " + _vm._s(_vm.orders.name) + " ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.name")) + ":")]), _vm._v(" " + _vm._s(_vm.orders.name) + " ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Phone:")]), _vm._v(" " + _vm._s(_vm.orders.phone) + " ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.phone")) + ":")]), _vm._v(" " + _vm._s(_vm.orders.phone) + "\n                                                    ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Address:")]), _vm._v(" " + _vm._s(_vm.orders.address) + " ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.address")) + ":")]), _vm._v(" " + _vm._s(_vm.orders.address) + "\n                                                    ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Date:")]), _vm._v(" " + _vm._s(_vm.orders.order_date) + " ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.date")) + ":")]), _vm._v(" " + _vm._s(_vm.orders.order_date) + "\n                                                    ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Pay Through:")]), _vm._v(" " + _vm._s(_vm.orders.payby) + " ")])])]), _vm._v(" "), _c("div", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.paythrough")) + ":")]), _vm._v(" " + _vm._s(_vm.orders.payby) + " ")])])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })]), _vm._v(" "), _c("hr")]), _vm._v(" "), _c("div", {
     staticClass: "col-lg-6"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(2), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("ul", {
     staticClass: "list-group"
   }, [_c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Sub Total:")]), _vm._v(" " + _vm._s(Number(_vm.orders.sub_total).toLocaleString()) + " IQ ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.subtotal")) + ":")]), _vm._v(" " + _vm._s(Number(_vm.orders.sub_total).toLocaleString()) + " IQ ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Vat:")]), _vm._v(" " + _vm._s(_vm.orders.vat) + " ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.vat")) + ":")]), _vm._v(" " + _vm._s(_vm.orders.vat) + " ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Total:")]), _vm._v(" " + _vm._s(Number(_vm.orders.total).toLocaleString()) + " IQ ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.total")) + ":")]), _vm._v(" " + _vm._s(Number(_vm.orders.total).toLocaleString()) + " IQ ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Pay Amount:")]), _vm._v(" " + _vm._s(Number(_vm.orders.pay).toLocaleString()) + " IQ ")]), _vm._v(" "), _c("li", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.payamount")) + ":")]), _vm._v(" " + _vm._s(Number(_vm.orders.pay).toLocaleString()) + " IQ ")]), _vm._v(" "), _c("li", {
     staticClass: "list-group-item"
-  }, [_c("b", [_vm._v("Due Amount:")]), _vm._v(" " + _vm._s(Number(_vm.orders.due).toLocaleString()) + " IQ ")])])]), _vm._v(" "), _c("div", {
+  }, [_c("b", [_vm._v(_vm._s(_vm.$t("order.dueamount")) + ":")]), _vm._v(" " + _vm._s(Number(_vm.orders.due).toLocaleString()) + " IQ ")])])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])]), _vm._v(" "), _c("div", {
     staticClass: "col-lg-12"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(3), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+  }), _vm._v(" "), _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table align-items-center table-flush"
-  }, [_vm._m(4), _vm._v(" "), _c("tbody", _vm._l(_vm.details, function (detail) {
+  }, [_c("thead", {
+    staticClass: "thead-light"
+  }, [_c("tr", [_c("th", [_vm._v(_vm._s(_vm.$t("order.productname")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.productcode")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.image")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.qty")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.unitprice")))]), _vm._v(" "), _c("th", [_vm._v(_vm._s(_vm.$t("order.total")))])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.details, function (detail) {
     return _c("tr", {
       key: detail.id
     }, [_c("td", [_vm._v(_vm._s(detail.product_name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(detail.product_code))]), _vm._v(" "), _c("td", [_c("img", {
@@ -7387,7 +7364,7 @@ var render = function render() {
         id: "em_photo",
         alt: ""
       }
-    })]), _vm._v(" "), _c("td", [_vm._v(_vm._s(detail.pro_quantity))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(detail.product_price).toLocaleString()) + " IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(detail.sub_total).toLocaleString()) + " IQ")])]);
+    })]), _vm._v(" "), _c("td", [_vm._v(_vm._s(detail.pro_quantity))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(detail.product_price).toLocaleString()) + "\n                                                                IQ")]), _vm._v(" "), _c("td", [_vm._v(_vm._s(Number(detail.sub_total).toLocaleString()) + " IQ\n                                                            ")])]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer"
   })])])]), _vm._v(" "), _c("div", {
@@ -7395,50 +7372,7 @@ var render = function render() {
   })])])])])])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "text-center"
-  }, [_c("h1", {
-    staticClass: "h4 text-gray-900 mb-4"
-  }, [_vm._v("Order Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Order Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Order Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-  }, [_c("h6", {
-    staticClass: "m-0 font-weight-bold text-primary"
-  }, [_vm._v("Order Details")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("thead", {
-    staticClass: "thead-light"
-  }, [_c("tr", [_c("th", [_vm._v("Product Name")]), _vm._v(" "), _c("th", [_vm._v("Product Code")]), _vm._v(" "), _c("th", [_vm._v("Image")]), _vm._v(" "), _c("th", [_vm._v("Qty")]), _vm._v(" "), _c("th", [_vm._v("Unit Price")]), _vm._v(" "), _c("th", [_vm._v("Total")])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -15010,7 +14944,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#em_photo[data-v-64350ecd] {\r\n    height: 40px;\r\n    width: 40px;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n#em_photo[data-v-64350ecd] {\r\n    height: 40px;\r\n    width: 40px;\n}\r\n", ""]);
 
 // exports
 
@@ -75011,7 +74945,7 @@ var routes = [{
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var _salary, _expense, _salary2;
+var _salary, _order, _expense, _salary2, _order2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -75214,7 +75148,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "Salary": "الراتب",
       "joiningdate": "تاريخ الانضمام",
       "email": "الايميل"
-    }, _defineProperty(_salary, "name", "الاسم"), _defineProperty(_salary, "salary", "الراتب"), _defineProperty(_salary, "month", "الشهر"), _defineProperty(_salary, "paynow", "ادفع الان"), _defineProperty(_salary, "back", "الرجوع"), _defineProperty(_salary, "amount", "الباقي"), _defineProperty(_salary, "date", "التاريخ"), _defineProperty(_salary, "action", "النشاط"), _defineProperty(_salary, "editsalary", "تعديل الراتب"), _defineProperty(_salary, "updatesalary", "تحديث الرواتب"), _defineProperty(_salary, "update", "تحديث"), _defineProperty(_salary, "january", "يناير"), _defineProperty(_salary, "february", "فبراير"), _defineProperty(_salary, "march", "مارس"), _defineProperty(_salary, "april", "ابريل"), _defineProperty(_salary, "may", "مايو"), _defineProperty(_salary, "june", "يونيو"), _defineProperty(_salary, "july", "يوليو"), _defineProperty(_salary, "august", "اغسطس"), _defineProperty(_salary, "september", "سبتمبر"), _defineProperty(_salary, "october", "اكتوبر"), _defineProperty(_salary, "november", "نوفمبر"), _defineProperty(_salary, "december", "ديسمبر"), _salary) // "messages": {
+    }, _defineProperty(_salary, "name", "الاسم"), _defineProperty(_salary, "salary", "الراتب"), _defineProperty(_salary, "month", "الشهر"), _defineProperty(_salary, "paynow", "ادفع الان"), _defineProperty(_salary, "back", "الرجوع"), _defineProperty(_salary, "amount", "الباقي"), _defineProperty(_salary, "date", "التاريخ"), _defineProperty(_salary, "action", "النشاط"), _defineProperty(_salary, "editsalary", "تعديل الراتب"), _defineProperty(_salary, "updatesalary", "تحديث الرواتب"), _defineProperty(_salary, "update", "تحديث"), _defineProperty(_salary, "january", "يناير"), _defineProperty(_salary, "february", "فبراير"), _defineProperty(_salary, "march", "مارس"), _defineProperty(_salary, "april", "ابريل"), _defineProperty(_salary, "may", "مايو"), _defineProperty(_salary, "june", "يونيو"), _defineProperty(_salary, "july", "يوليو"), _defineProperty(_salary, "august", "اغسطس"), _defineProperty(_salary, "september", "سبتمبر"), _defineProperty(_salary, "october", "اكتوبر"), _defineProperty(_salary, "november", "نوفمبر"), _defineProperty(_salary, "december", "ديسمبر"), _salary),
+    "order": (_order = {
+      "searchorder": "بحث عن طلبات",
+      "todayorder": "الطلبات اليوم",
+      "name": "الاسم",
+      "totalamount": "المبلغ الاجمالي",
+      "pay": "الدفع",
+      "due": "الباقي",
+      "payby": "طريقة الدفع",
+      "action": "النشاط",
+      "view": "عرض",
+      "orderdetails": "بيانات الطلبات",
+      "search": "بحث",
+      "productname": "اسم المنتج",
+      "productcode": "باركود المنتج",
+      "image": "الصور",
+      "unitprice": "سعر الوحدة",
+      "total": "المجموع",
+      "qty": "كمية",
+      "subtotal": "مجموع الكميات",
+      "vat": "الخصم"
+    }, _defineProperty(_order, "total", "المجموع بعد خصم"), _defineProperty(_order, "phone", "الرقم"), _defineProperty(_order, "address", "العنوان"), _defineProperty(_order, "date", "التاريخ"), _defineProperty(_order, "paythrough", "الدفع بواسطة"), _defineProperty(_order, "payamount", "مبلغ الدفع"), _defineProperty(_order, "dueamount", "مبلغ المستحق"), _defineProperty(_order, "searchbydate", "بحث عن طريق التاريخ"), _order) // "messages": {
     //     "hello": "Hello {name}",
     // }
 
@@ -75407,6 +75362,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       "joiningdate": "Joining Date",
       "email": "Email"
     }, _defineProperty(_salary2, "name", "Name"), _defineProperty(_salary2, "salary", "Salary"), _defineProperty(_salary2, "month", "Month"), _defineProperty(_salary2, "paynow", "Pay Now"), _defineProperty(_salary2, "back", "Back"), _defineProperty(_salary2, "amount", "Amount"), _defineProperty(_salary2, "date", "Date"), _defineProperty(_salary2, "action", "Action"), _defineProperty(_salary2, "editsalary", "Edit Salary"), _defineProperty(_salary2, "updatesalary", "Update Salary"), _defineProperty(_salary2, "update", "Update"), _defineProperty(_salary2, "january", "January"), _defineProperty(_salary2, "february", "February"), _defineProperty(_salary2, "march", "March"), _defineProperty(_salary2, "april", "April"), _defineProperty(_salary2, "may", "May"), _defineProperty(_salary2, "june", "June"), _defineProperty(_salary2, "july", "July"), _defineProperty(_salary2, "august", "August"), _defineProperty(_salary2, "september", "September"), _defineProperty(_salary2, "october", "October"), _defineProperty(_salary2, "november", "November"), _defineProperty(_salary2, "december", "December"), _salary2),
+    "order": (_order2 = {
+      "searchorder": "Search Order",
+      "todayorder": "Today Order",
+      "name": "Name",
+      "totalamount": "Total Amount",
+      "payby": "Payby",
+      "action": "action",
+      "view": "View",
+      "orderdetails": "Order Details",
+      "search": "Search",
+      "productname": "Product Name",
+      "productcode": "Product Code",
+      "image": "Image",
+      "unitprice": "Unit Price",
+      "total": "Total",
+      "qty": "Qty",
+      "subtotal": "Sub Total",
+      "vat": "Vat"
+    }, _defineProperty(_order2, "total", "Total"), _defineProperty(_order2, "pay", "pay"), _defineProperty(_order2, "due", "Due"), _defineProperty(_order2, "phone", "Phone"), _defineProperty(_order2, "address", "Address"), _defineProperty(_order2, "date", "Date"), _defineProperty(_order2, "paythrough", "Pay Through"), _defineProperty(_order2, "payamount", "Pay Amount"), _defineProperty(_order2, "dueamount", "Pay Amount"), _defineProperty(_order2, "searchbydate", "Search By Date"), _order2),
     "auth": {
       "failed": "These credentials do not match our records.",
       "throttle": "Too many login attempts. Please try again in {seconds} seconds."
